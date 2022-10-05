@@ -1,0 +1,132 @@
+body {
+  height: 100vh;
+  background-color: #FAF8F8;
+}
+
+.Input,
+.Wall {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  /* display: flex; */
+}
+
+h1 {
+  font-family: 'Krona One', sans-serif;
+  font-size: 3rem !important;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  text-align: center;
+}
+
+Circle,
+circle,
+.circle {
+  fill: red !important;
+  z-index: -1;
+  position: absolute;
+
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.Input {
+  position: relative;
+}
+
+.containerA,
+#script-tag {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.Wall .containerA {
+  z-index: 1;
+}
+
+.Input .containerA {
+  z-index: -1;
+}
+
+.containerB {
+  position: absolute;
+}
+
+.circle {
+  transition: 5s ease-in-out;
+}
+
+/* Unable to select element */
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.Wall p {
+  background-color: #FAF8F8;
+  font-weight: 400;
+  text-transform: uppercase !important;
+  padding: 5px;
+}
+
+/* .containerA {
+  filter: blur(0.5px);
+} */
+
+.containerB {
+  background-color: #FAF8F8;
+  box-shadow: 0px 0px 40px 40px #FAF8F8;
+  /* width: 70% !important; */
+}
+
+@media only screen and (max-width: 600px) {
+  .Input .containerB .message {
+    width:80% !important;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .Input .containerB {
+    width: 35em !important;
+    align-items: center;
+  }
+
+  .Input .containerB textarea,
+  .Input .containerB .style-select {
+    height: 20vh;
+  }
+  .Input .containerB .message {
+    width: 50% !important;
+  }
+}
+
+.style-select {
+  /* background-color: pink; */
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.style-select img {
+  vertical-align: middle;
+  height: 30px;
+  transform: translate(0, 50%);
+}
