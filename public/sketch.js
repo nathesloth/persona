@@ -10,8 +10,8 @@ function setup() {
   img = loadImage("https://i.imgur.com/SMHaUKp.png");
   img2 = loadImage("https://i.imgur.com/deS49jo.png");
   img3 = loadImage("https://i.imgur.com/5ylLFA4.png");
-  // img4 = loadImage("https://i.imgur.com/2AjlLnZ.png");
   img4 = loadImage("https://i.imgur.com/m1fTJIG.png");
+  // img4 = loadImage("https://i.imgur.com/2AjlLnZ.png");
   // img4 = loadImage("https://i.imgur.com/ot2RqQi.png");
   // img5 = loadImage("https://i.imgur.com/Wpzs21R.png");
   // frameRate(10); //to make it gradually disappear
@@ -20,7 +20,7 @@ function setup() {
 function draw() {
   // image(img, 0, 0);
   // background('rgba(250,248,248, 0.4)');// to make it gradually disappear changes
-  //randomStuff();
+  randomStuff();
 }
 
 function randomStuff() {
