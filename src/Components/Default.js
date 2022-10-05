@@ -3,7 +3,6 @@ import "../index.css";
 import React from "react";
 import { useState } from "react";
 import Axios from "axios";
-import ScriptTag from "react-script-tag";
 
 const Default = (props) => {
     const [responseList, setResponseList] = useState([]);
