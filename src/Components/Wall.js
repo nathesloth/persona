@@ -14,15 +14,8 @@ const Wall = (props) => {
   }, [])
 
   return (
-    // <div className="Wall" onClick={addCircle}>
     <div className="Wall" id="Wall">
       <div class="containerA w-100" id="containerA">
-        {/* <ScriptTag
-          id="script-tag"
-          class="containerA w-100"
-          type="text/javascript"
-          src="sketch.js"
-        /> */}
       </div>
       <div class="container containerB unselectable">
         <div class="row">

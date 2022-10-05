@@ -7,7 +7,6 @@ import Axios from "axios";
 const Input = (props) => {
   const [response, setResponse] = useState("");
   const [responseList, setResponseList] = useState([]);
-  const [circles, setCircles] = useState([]);
 
   // const addResponse = () => {
   //   Axios.post("http://localhost:3002/api/insert", {
@@ -39,47 +38,7 @@ const Input = (props) => {
     setResponse("");
   };
 
-  const mouseCool = (event) => {
-    let rect = event.currentTarget.getBoundingClientRect();
-    let x = event.clientX - rect.left;
-    let y = event.clientY - rect.top;
-    // Fix it a bit to make it more intuitive
-    return [x, y];
-  };
-
-  const addCircle = (event) => {
-    let [x, y] = mouseCool(event);
-
-    console.log(x + " " + y);
-    const divstyle = { position: "absolute", top: y + "px", left: x + "px" };
-
-    var newCircle = (
-      <div key={circles.length + 1} className="circle" style={divstyle}></div>
-    );
-    // update the array of circles; you HAVE to spread the current array
-    // as 'circles' is immutible and will not accept new info
-    let allCircles;
-
-    // Only create circles when it meets this limit, otherwise do not add
-    if (circles.length < 5) {
-      allCircles = [...circles, newCircle];
-    } else {
-      allCircles = [...circles];
-    }
-
-    if (circles.length == 5) {
-      allCircles.shift();
-    }
-
-    // update 'circles'
-    setCircles(allCircles);
-  };
-
-  console.log(circles);
-
   return (
-    // <div className="Input" onClick={addCircle}>
-    //   <div class="containerA w-100">{circles}</div>
     <div className="Input">
       <div class="containerA w-100" id="containerA"></div>
       <div class="container align-center w-100 containerB unselectable">
