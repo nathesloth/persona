@@ -4,13 +4,21 @@ let img3;
 let img4;
 let img5;
 
-function setup() {
-  var canvas = createCanvas(windowWidth, windowHeight);
-  canvas.parent("containerA");
+function preload() {
   img = loadImage("https://i.imgur.com/SMHaUKp.png");
   img2 = loadImage("https://i.imgur.com/deS49jo.png");
   img3 = loadImage("https://i.imgur.com/5ylLFA4.png");
   img4 = loadImage("https://i.imgur.com/m1fTJIG.png");
+}
+
+function setup() {
+  var canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent("containerA");
+  // img = loadImage("https://i.imgur.com/SMHaUKp.png");
+  // img2 = loadImage("https://i.imgur.com/deS49jo.png");
+  // img3 = loadImage("https://i.imgur.com/5ylLFA4.png");
+  // img4 = loadImage("https://i.imgur.com/m1fTJIG.png");
+
   // img4 = loadImage("https://i.imgur.com/2AjlLnZ.png");
   // img4 = loadImage("https://i.imgur.com/ot2RqQi.png");
   // img5 = loadImage("https://i.imgur.com/Wpzs21R.png");
