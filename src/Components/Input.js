@@ -5,12 +5,7 @@ import { useState } from "react";
 import Axios from "axios";
 import {
   BrowserRouter as Router,
-  Switch,
-  Routes,
-  useNavigate,
-  Route,
   Link,
-  NavLink,
 } from "react-router-dom";
 
 const Input = (props) => {
