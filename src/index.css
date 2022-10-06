@@ -134,7 +134,7 @@ button {
 
 /* ------------------------------------------ */
 
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 500px) {
   .Input h1 {
     font-size: 2em !important;
   }
