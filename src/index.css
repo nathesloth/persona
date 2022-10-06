@@ -55,7 +55,6 @@ h1 {
 .Input input[type="text"],
 .Input textarea {
   border: none;
-  height: 4em;
   width: 100% !important;
   box-sizing:border-box;
   margin: auto;
@@ -78,7 +77,7 @@ h1 {
 /* ------------------------------------------ */
 
 /* Testing Changing the Div */
-.inputSection{
+.inputSection {
   background-color: pink;
   height: 3em !important;
 }
@@ -133,11 +132,20 @@ button {
 } */
 
 
-
+/* ------------------------------------------ */
 
 @media only screen and (max-width: 1366px) {
-  .Navigation .text-link,
-  .Navigation .nav-link {
-    padding: 0.5rem !important;
+  .Input h1 {
+    font-size: 2em !important;
   }
+  .Input form {
+    width: 75% !important;
+    align-items: center;
+    margin: auto;
+  }
+  .Input #hello {
+    height: 150px;
+  }
+  
+
 }
