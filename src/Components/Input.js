@@ -3,6 +3,15 @@ import "../index.css";
 import React from "react";
 import { useState } from "react";
 import Axios from "axios";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Routes,
+  useNavigate,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
 
 const Input = (props) => {
   const [response, setResponse] = useState("");
@@ -77,10 +86,13 @@ const Input = (props) => {
                   }}
                 ></textarea>
               </div>
+
+
               <button type="submit" onClick={addResponse}>
                 <img src="https://img.icons8.com/ios/50/FFFFFF/circled-up-2.png" />
                 {/* <i class="bi bi-arrow-up-circle"></i> */}
               </button>
+              <Link to="/wall">View the Wall</Link>
               {/* <img src="https://img.icons8.com/material-rounded/48/000000/chevron-left.png" /> */}
             </form>
           </div>
