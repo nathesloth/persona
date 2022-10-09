@@ -4,8 +4,6 @@ import React from "react";
 import { useState } from "react";
 import Axios from "axios";
 import {
-  BrowserRouter as Router,
-  Link,
   useNavigate
 } from "react-router-dom";
 
@@ -13,7 +11,7 @@ const Input = (props) => {
   const navigate = useNavigate();
 
   const [response, setResponse] = useState("");
-  const [responseList, setResponseList] = useState([]);
+  const [style, setStyle] = useState("noStyle");
   const [text, setText] = useState("");
 
   // const addResponse = () => {
@@ -33,12 +31,14 @@ const Input = (props) => {
   const addResponse = () => {
     Axios.post("https://persona-collabwall.herokuapp.com/api/insert", {
       response: response,
+      style: style,
     }).then(() => {
       console.log("success");
     });
   };
 
   const handleSubmit = (event) => {
+    console.log(style);
     console.log("handleSubmit ran");
     event.preventDefault(); // 👈️ prevent page refresh
 
@@ -52,21 +52,25 @@ const Input = (props) => {
 
   const setNone = () => {
     document.getElementById("hello").className = "noStyle";
+    setStyle("noStyle");
     console.log('button clicked');
   };
 
   const setInsta = () => {
     document.getElementById("hello").className = "instaStyle";
+    setStyle("instaStyle");
     console.log('button clicked');
   };
 
   const setiMessage = () => {
     document.getElementById("hello").className = "iMessageStyle";
+    setStyle("iMessageStyle");
     console.log('button clicked');
   };
 
   const setNote = () => {
     document.getElementById("hello").className = "noteStyle";
+    setStyle("noteStyle");
     console.log('button clicked');
   };
 

@@ -84,6 +84,7 @@ h1 {
   display: flex;
   justify-content: left;
   align-items: center;
+  width: 300px;
 }
 
 .instaStyle::before {
@@ -99,8 +100,13 @@ h1 {
   background-color: #3A77EA !important;
   border-radius: 1.2em !important;
   color: white !important;
+  width: 200px;
 
-  /* text-transform:capitalize !important; */
+}
+
+.noteStyle {
+  background-color: #ffef9f !important;
+  width: 200px;
 }
 
 .parallax-group .delivered {
@@ -115,11 +121,6 @@ h1 {
   content: " - Remember this";
   background-color: none !important;
 } */
-
-
-.noteStyle {
-  background-color: lightcoral !important;
-}
 
 /* ------------------------------------------ */
 
@@ -200,11 +201,13 @@ button {
   border-radius: 10px;
   font-size: 0.9em;
   margin: 0 !important;
+  position: absolute;
 }
 
 /* ------------------------------------------ */
 .parallax {
-  height: 100vh;
+  height: 200vh;
+  width: 300%;
   perspective: 100px;
 }
 .parallax-group {
@@ -212,9 +215,9 @@ button {
   transform-style: preserve-3d;
 }
 .parallax-layer {
-  /* position: absolute; */
-  top: 100px;
+  position: absolute;
+  /* top: 100px;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: 0; */
 }

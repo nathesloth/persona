@@ -53,6 +53,9 @@ circle,
   position: fixed;
   top: 0;
   left: 0;
+  perspective: 100px;
+  transform-style: preserve-3d;
+
 }
 
 .Wall .containerA {

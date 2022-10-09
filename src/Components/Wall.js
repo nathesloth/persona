@@ -13,6 +13,18 @@ const Wall = (props) => {
     });
   }, [])
 
+  function returnRandomHeight() {
+    let max = window.innerHeight;
+    let min = 200;
+    return Math.random() * (max - min) + min;
+  }
+
+  function returnRandomWidth() {
+    let max = window.innerWidth;
+    let min = 100;
+    return Math.random() * (max - min) + min;
+  }
+
   return (
     <div className="Wall" id="Wall">
       <div class="containerA w-100" id="containerA">
@@ -21,13 +33,23 @@ const Wall = (props) => {
       <div class="containerC parallax">
         <section class="parallax-group">
           {responseList.map((val) => {
-            if (val.response !== "idk") {
+            if (val.style !== "iMessageStyle") {
               return (
-                <div className="responses unselectable parallax-layer">
-                  <p class="instaStyle">
+                <div className="responses unselectable parallax-layer" style={{ top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>
+                  <p class={val.style}>
                     {val.response}</p>
                   <br></br>
                   {/* <span class="delivered">Delivered</span> */}
+                </div>
+              );
+            }
+            else {
+              return (
+                <div className="responses unselectable parallax-layer" style={{ top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>
+                  <p class={val.style}>
+                    {val.response}</p>
+                  <span class="delivered">Delivered</span>
+                  <br></br>
                 </div>
               );
             }

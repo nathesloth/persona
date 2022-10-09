@@ -105,7 +105,6 @@ function mousePressed() {
   else if (value == 5) {
     image(img5, mouseX - 25, mouseY - 25, sizeRandom - 5, sizeRandom - 5);
   }
-  console.log("Clicked");
 }
 
 function windowResized() {
