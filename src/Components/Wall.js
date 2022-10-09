@@ -17,6 +17,24 @@ const Wall = (props) => {
     <div className="Wall" id="Wall">
       <div class="containerA w-100" id="containerA">
       </div>
+
+      <div class="containerC parallax">
+        <section class="parallax-group">
+          {responseList.map((val) => {
+            if (val.response !== "idk") {
+              return (
+                <div className="responses unselectable parallax-layer">
+                  <p class="instaStyle">
+                    {val.response}</p>
+                  <br></br>
+                  {/* <span class="delivered">Delivered</span> */}
+                </div>
+              );
+            }
+          })}
+        </section>
+      </div>
+
       <div class="container containerB unselectable">
         <div class="row">
           <div class="col-12">
@@ -35,15 +53,6 @@ const Wall = (props) => {
               a final collaboration wall at the end of the exhibit.<br></br>Scan
               the QR code and write away!
             </p> */}
-          </div>
-          <div>
-            {responseList.map((val) => {
-              return (
-                <div className="responses">
-                  <p>{val.response}</p>
-                </div>
-              );
-            })}
           </div>
         </div>
       </div>

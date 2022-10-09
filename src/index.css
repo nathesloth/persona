@@ -77,20 +77,56 @@ h1 {
 /* ------------------------------------------ */
 
 /* Testing Changing the Div */
-.inputSection {
-  background-color: pink;
-  height: 3em !important;
+
+.instaStyle {
+  background-color: white !important;
+  font-weight: 400 !important;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
-.inputSection2{
-  background-color: lightcoral;
+.instaStyle::before {
+  background-image: url('https://i.imgur.com/2jCnrZq.png');
+  background-size: 115px 25px;
+  display: inline-block;
+  width: 115px; 
+  height: 25px;
+  content:" ";
+}
+
+.iMessageStyle {
+  background-color: #3A77EA !important;
+  border-radius: 1.2em !important;
+  color: white !important;
+
+  /* text-transform:capitalize !important; */
+}
+
+.parallax-group .delivered {
+  font-size: 0.7em;
+  width: 250px !important;
+  text-align: end;
+  display: inline-block;
+  color: #6e6e6e;
+}
+
+/* .iMessageStyle::after {
+  content: " - Remember this";
+  background-color: none !important;
+} */
+
+
+.noteStyle {
+  background-color: lightcoral !important;
 }
 
 /* ------------------------------------------ */
 
-body {
+
+/* body {
   overflow:hidden;
-}
+} */
 
 .Input button {
   margin-top: 20px;
@@ -149,7 +185,36 @@ button {
   }
 }
 
-
 .bg-yellow {
   background-color: yellow !important;
+}
+
+/* Don't move when scrolling */
+.containerB {
+  position: fixed !important;
+}
+
+.containerC .responses p {
+  /* background-color: pink; */
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 0.9em;
+  margin: 0 !important;
+}
+
+/* ------------------------------------------ */
+.parallax {
+  height: 100vh;
+  perspective: 100px;
+}
+.parallax-group {
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+.parallax-layer {
+  /* position: absolute; */
+  top: 100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }

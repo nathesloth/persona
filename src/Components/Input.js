@@ -51,22 +51,22 @@ const Input = (props) => {
   // Setting the Styles of Each Button
 
   const setNone = () => {
-    document.getElementById("hello").className = "inputSection";
+    document.getElementById("hello").className = "noStyle";
     console.log('button clicked');
   };
 
   const setInsta = () => {
-    document.getElementById("hello").className = "inputSection2";
+    document.getElementById("hello").className = "instaStyle";
     console.log('button clicked');
   };
 
   const setiMessage = () => {
-    document.getElementById("hello").className = "inputSection3";
+    document.getElementById("hello").className = "iMessageStyle";
     console.log('button clicked');
   };
 
   const setNote = () => {
-    document.getElementById("hello").className = "inputSection4";
+    document.getElementById("hello").className = "noteStyle";
     console.log('button clicked');
   };
 
@@ -99,6 +99,7 @@ const Input = (props) => {
                   spellCheck="true"
                   maxlength="400"
                   value={response}
+                  onInput="this.parentNode.dataset.replicatedValue = this.value"
                   onChange={(event) => {
                     setResponse(event.target.value);
                   }}

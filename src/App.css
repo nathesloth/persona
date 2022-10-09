@@ -54,9 +54,15 @@ circle,
   top: 0;
   left: 0;
 }
+
 .Wall .containerA {
   z-index: 1;
 }
+
+.Wall .containerC {
+  z-index: 2;
+}
+
 
 .Input .containerA {
   z-index: -1;
@@ -83,8 +89,8 @@ circle,
 .Wall p {
   background-color: #FAF8F8;
   font-weight: 400;
-  text-transform: uppercase !important;
-  padding: 5px;
+  /* text-transform: uppercase; */
+  /* padding: 5px; */
 }
 
 /* .containerA {
