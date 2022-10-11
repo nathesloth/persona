@@ -28,7 +28,7 @@ function setup() {
 function draw() {
   // image(img, 0, 0);
   // background('rgba(250,248,248, 0.4)');// to make it gradually disappear changes
-  //randomStuff();
+  randomStuff();
 }
 
 function randomStuff() {
