@@ -107,16 +107,16 @@ function mousePressed() {
   }
 }
 
-function windowResized() {
-  canvas.resizeCanvas(windowWidth, windowHeight);
-  if (windowHeight > windowWidth) {
-    factor = windowHeight;
-    factdiv = 1080;
-  } else {
-    factor = windowWidth;
-    factdiv = 1920;
-  }
-}
+// function windowResized() {
+//   canvas.resizeCanvas(windowWidth, windowHeight);
+//   if (windowHeight > windowWidth) {
+//     factor = windowHeight;
+//     factdiv = 1080;
+//   } else {
+//     factor = windowWidth;
+//     factdiv = 1920;
+//   }
+// }
 
 draw();
 
