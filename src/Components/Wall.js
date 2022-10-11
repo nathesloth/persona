@@ -33,7 +33,7 @@ const Wall = (props) => {
       <div class="containerA w-100 rellax" data-rellax-speed="10" id="containerA">
       </div>
 
-      <div class="containerC parallax">
+      <div class="containerC parallax unselectable">
         <section class="parallax-group">
           {responseList.map((val) => {
             if (val.style !== "iMessageStyle") {
