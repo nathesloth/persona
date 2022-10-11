@@ -5,6 +5,10 @@ body {
   background-color: #FAF8F8;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .Input,
 .Wall {
   height: 100vh;
@@ -49,8 +53,8 @@ circle,
 .containerA,
 #script-tag {
   height: 100vh;
-  width: 100%;
-  position: fixed;
+  width: 300vw;
+  /* position: fixed; */
   top: 0;
   left: 0;
   perspective: 100px;
@@ -59,11 +63,20 @@ circle,
 }
 
 .Wall .containerA {
-  z-index: 1;
+  z-index: 1;  
+  position: absolute;
 }
 
+.containerB {
+  background-color: #FAF8F8;
+  box-shadow: 0px 0px 40px 40px #FAF8F8;
+  z-index: 0;
+  /* width: 70% !important; */
+}
+
+
 .Wall .containerC {
-  z-index: 2;
+  z-index: 3;
 }
 
 
@@ -99,12 +112,6 @@ circle,
 /* .containerA {
   filter: blur(0.5px);
 } */
-
-.containerB {
-  background-color: #FAF8F8;
-  box-shadow: 0px 0px 40px 40px #FAF8F8;
-  /* width: 70% !important; */
-}
 
 @media only screen and (max-width: 600px) {
   .Input .containerB .message {

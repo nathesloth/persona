@@ -207,7 +207,7 @@ button {
 /* ------------------------------------------ */
 .parallax {
   height: 200vh;
-  width: 300%;
+  width: 300vw;
   perspective: 100px;
 }
 .parallax-group {

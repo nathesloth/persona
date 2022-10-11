@@ -2,6 +2,7 @@ import "../App.css";
 import "../index.css";
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import Rellax from 'rellax';
 
 const Wall = (props) => {
   const [responseList, setResponseList] = useState([]);
@@ -14,20 +15,22 @@ const Wall = (props) => {
   }, [])
 
   function returnRandomHeight() {
-    let max = window.innerHeight;
+    let max = 3 * window.innerHeight;
     let min = 200;
     return Math.random() * (max - min) + min;
   }
 
   function returnRandomWidth() {
-    let max = window.innerWidth;
+    let max = 3 * window.innerWidth;
     let min = 100;
     return Math.random() * (max - min) + min;
   }
 
+  var rellax = new Rellax('.rellax');
+
   return (
     <div className="Wall" id="Wall">
-      <div class="containerA w-100" id="containerA">
+      <div class="containerA w-100 rellax" data-rellax-speed="10" id="containerA">
       </div>
 
       <div class="containerC parallax">
@@ -45,7 +48,7 @@ const Wall = (props) => {
             }
             else {
               return (
-                <div className="responses unselectable parallax-layer" style={{ top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>
+                <div className="responses unselectable parallax-layer rellax" data-rellax-speed="2" style={{ top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>
                   <p class={val.style}>
                     {val.response}</p>
                   <span class="delivered">Delivered</span>
