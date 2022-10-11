@@ -12,7 +12,7 @@ function preload() {
 }
 
 function setup() {
-  var canvas = createCanvas(windowWidth * 3, windowHeight * 3);
+  var canvas = createCanvas(windowWidth * 3, windowHeight * 4);
   canvas.parent("containerA");
   // img = loadImage("https://i.imgur.com/SMHaUKp.png");
   // img2 = loadImage("https://i.imgur.com/deS49jo.png");

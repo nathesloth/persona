@@ -1,99 +1,190 @@
 import "../App.css";
 import "../index.css";
+import "../home.css";
 import React from "react";
-import { useState } from "react";
-import Axios from "axios";
+import Rellax from 'rellax';
+import { Link } from "react-router-dom";
+
+
+var rellax2 = new Rellax('.rellax2', { horizontal: true, vertical: true });
 
 const Default = (props) => {
-    const [responseList, setResponseList] = useState([]);
-    const [circles, setCircles] = useState([]);
-    const [isTimeout, setTimer] = useState([false, false, false, false, false]);
-
-    const getResponses = () => {
-        Axios.get("http://localhost:3002/api/get").then((response) => {
-            setResponseList(response.data);
-        });
-    };
-
-    const mouseCool = (event) => {
-        let rect = event.currentTarget.getBoundingClientRect();
-        let x = event.clientX - rect.left;
-        let y = event.clientY - rect.top;
-        // Fix it a bit to make it more intuitive
-        return [x, y];
-    };
-
-    // When user presses button, add a bubble
-    const addCircle = (event) => {
-        let [x, y] = mouseCool(event);
-
-        console.log(x + " " + y);
-
-        console.log();
-        const divstyle = { position: "absolute", top: y + "px", left: x + "px" };
-
-        var newCircle = (
-            <div key={circles.length + 1} className="circle" style={divstyle}></div>
-        );
-        // update the array of circles; you HAVE to spread the current array
-        // as 'circles' is immutible and will not accept new info
-        let allCircles;
-
-        // Only create circles when it meets this limit, otherwise do not add
-        if (circles.length < 5) {
-            allCircles = [...circles, newCircle];
-        } else {
-            allCircles = [...circles];
-        }
-
-        if (circles.length == 5) {
-            allCircles.shift();
-        }
-
-        // update 'circles'
-        setCircles(allCircles);
-    };
-
-    console.log(circles);
 
     return (
-        // <div className="Wall" onClick={addCircle}>
-        <div className="Wall" id="Wall">
-            <div class="containerA w-100" id="containerA">
-                {/* <ScriptTag
-          id="script-tag"
-          class="containerA w-100"
-          type="text/javascript"
-          src="sketch.js"
-        /> */}
+        <div className="Home" id="Home">
+            <div class="containerA rellax2" data-rellax-speed="8" id="containerA">
             </div>
-            <div class="container containerB unselectable" onLoad={getResponses}>
+            <div class="home container unselectable">
                 <div class="row">
                     <div class="col-12">
+                        <p>what is your</p>
                         <h1>
-                            LEAVE YOUR<br></br>MARK
+                            PERSONA?
                         </h1>
                     </div>
                 </div>
+            </div>
+            <div class="rellax2" data-rellax-speed="-8">
+                <img src="https://i.imgur.com/SMHaUKp.png" width={200} />
+                <img src="https://i.imgur.com/deS49jo.png" width={100} />
+                <img src="https://i.imgur.com/5ylLFA4.png" width={275} />
+                <img src="https://i.imgur.com/m1fTJIG.png" width={150} />
+                <img src="https://i.imgur.com/5ylLFA4.png" width={300} />
+                <img src="https://i.imgur.com/m1fTJIG.png" width={150} />
+                <img src="https://i.imgur.com/SMHaUKp.png" width={200} />
+                <img src="https://i.imgur.com/deS49jo.png" width={100} />
+            </div>
+            <div class="home container unselectable">
                 <div class="row">
                     <div class="col-12">
-                        {/* <p>
-              We encourage you to leave something behind on this collab wall.
-              <br></br>
-              This may be a message, words of inspiration or something
-              completely random.<br></br>All messages placed will be curated in
-              a final collaboration wall at the end of the exhibit.<br></br>Scan
-              the QR code and write away!
-            </p> */}
+                        <p>
+                            definition: the aspect of someone's character that is presented to or perceived by others
+                        </p>
                     </div>
-                    <div>
-                        {responseList.map((val, key) => {
-                            return (
-                                <div className="responses">
-                                    <p>{val.text}</p>
-                                </div>
-                            );
-                        })}
+                </div>
+            </div>
+
+
+            <div class="home container unselectable">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            does it ever feel like you are wearing a mask?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="home container unselectable">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            or that to be liked you need to look like a celebrity?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="home container unselectable">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            that to be popular you need lots of likes and followers?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="home container unselectable">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            do you ever feel that the reflection you see in the mirror is not good enough?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="home container unselectable">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            Platforms like Youtube, Facebook and Instagram portray an image of beauty and perfection
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="home container unselectable">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            one that at times isn't as realistic or healthy as we imagine
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home container unselectable">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            social media is a bunch of highlights
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="home container unselectable">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            all manipulated to look like everyone is beautiful, successful and amazing
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home container unselectable">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            realistically they are just like you and me
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home container unselectable">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            flaws and everything
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home container unselectable">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            as well as your own quirks, specialities and traits
+                            <br></br>
+                            that make you
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home container unselectable">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            YOU
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home container unselectable">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            We encourage you to leave something behind on this collab wall.
+                            <br></br>
+                            This may be a message, words of inspiration or something
+                            completely random.<br></br>All messages placed will be curated in
+                            a final collaboration wall at the end of the exhibit.<br></br>Scan
+                            the QR code and write away!
+                        </p>
+                        <Link to="/Input">Leave a message here!</Link>
                     </div>
                 </div>
             </div>

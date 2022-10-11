@@ -10,7 +10,8 @@ html {
 }
 
 .Input,
-.Wall {
+.Wall,
+.Home {
   height: 100vh;
   width: 100%;
   text-align: center;
@@ -62,8 +63,9 @@ circle,
 
 }
 
-.Wall .containerA {
-  z-index: 1;  
+.Wall .containerA,
+.Home .containerA {
+  z-index: 1;
   position: absolute;
 }
 
@@ -115,7 +117,7 @@ circle,
 
 @media only screen and (max-width: 600px) {
   .Input .containerB .message {
-    width:80% !important;
+    width: 80% !important;
     align-items: center;
   }
 }
@@ -130,6 +132,7 @@ circle,
   .Input .containerB .style-select {
     height: 20vh;
   }
+
   .Input .containerB .message {
     width: 50% !important;
   }

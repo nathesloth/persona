@@ -1,0 +1,23 @@
+.home {
+    position: inherit !important;
+    display: block;
+    perspective: 100px;
+    transform-style: preserve-3d;
+}
+
+.Home {
+    text-align: center;
+}
+
+.Home .container {
+    align-items: center;
+    margin: auto;
+    margin-top: 250px;
+    padding-bottom: 200px;
+}
+
+.Home p {
+    width: 50%;
+    font-weight: 500;
+    margin: auto;
+}

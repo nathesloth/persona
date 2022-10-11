@@ -6,6 +6,7 @@ import Rellax from 'rellax';
 
 const Wall = (props) => {
   const [responseList, setResponseList] = useState([]);
+  var rellax = new Rellax('.rellax', { horizontal: true, vertical: true });
 
   useEffect(() => {
     Axios.get("https://persona-collabwall.herokuapp.com/api/get").then((response) => {
@@ -26,7 +27,6 @@ const Wall = (props) => {
     return Math.random() * (max - min) + min;
   }
 
-  var rellax = new Rellax('.rellax');
 
   return (
     <div className="Wall" id="Wall">
