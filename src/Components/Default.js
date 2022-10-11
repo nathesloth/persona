@@ -1,14 +1,16 @@
 import "../App.css";
 import "../index.css";
 import "../home.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Rellax from 'rellax';
 import { Link } from "react-router-dom";
 
 
-var rellax2 = new Rellax('.rellax2', { horizontal: true, vertical: true });
-
 const Default = (props) => {
+
+    useEffect(() => {
+        var rellax = new Rellax('.rellax2', { horizontal: true, vertical: true });
+    }, [])
 
     return (
         <div className="Home" id="Home">
@@ -24,7 +26,7 @@ const Default = (props) => {
                     </div>
                 </div>
             </div>
-            <div class="rellax2" data-rellax-speed="-8">
+            <div class="rellax2" data-rellax-speed="2">
                 <img src="https://i.imgur.com/SMHaUKp.png" width={200} />
                 <img src="https://i.imgur.com/deS49jo.png" width={100} />
                 <img src="https://i.imgur.com/5ylLFA4.png" width={275} />
