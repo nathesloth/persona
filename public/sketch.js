@@ -139,5 +139,3 @@ function touchStarted() {
 // }
 
 draw();
-
-assignToDiv();
