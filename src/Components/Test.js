@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Test = (props) => {
     return (
         <div>
-            <div class="containerA " data-rellax-speed="8" id="containerA">
+            <div class="containerA " id="containerA">
             </div>
         </div>
     );
