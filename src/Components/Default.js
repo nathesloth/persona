@@ -8,13 +8,22 @@ import { Link } from "react-router-dom";
 
 const Default = (props) => {
 
+    const buttonStyle = {
+        textDecoration: "none",
+        color: "black",
+        padding: "20px 20px",
+        border: "none",
+        backgroundColor: "white",
+        borderRadius: "10px",
+    };
+
     useEffect(() => {
         var rellax = new Rellax('.rellax2', { horizontal: true, vertical: true });
     }, [])
 
     return (
         <div className="Home" id="Home">
-            <div class="containerA rellax2" data-rellax-speed="8" id="containerA">
+            <div class="containerA rellax2 unselectable" data-rellax-speed="8" id="containerA">
             </div>
             <div class="home container unselectable">
                 <div class="row">
@@ -26,15 +35,18 @@ const Default = (props) => {
                     </div>
                 </div>
             </div>
-            <div class="rellax2" data-rellax-speed="2">
+            <div class="rellax2 unselectable" data-rellax-speed="2" >
+                <img class="rellax" data-rellax-speed="-4" src="https://i.imgur.com/m1fTJIG.png" width={150} />
+                <img class="rellax2" data-rellax-speed="-5" src="https://i.imgur.com/SMHaUKp.png" width={200} />
+                <img class="rellax2" data-rellax-speed="-2" src="https://i.imgur.com/deS49jo.png" width={100} />
                 <img src="https://i.imgur.com/SMHaUKp.png" width={200} />
                 <img src="https://i.imgur.com/deS49jo.png" width={100} />
-                <img src="https://i.imgur.com/5ylLFA4.png" width={275} />
+                <img class="rellax2" data-rellax-speed="4" src="https://i.imgur.com/5ylLFA4.png" width={275} />
                 <img src="https://i.imgur.com/m1fTJIG.png" width={150} />
                 <img src="https://i.imgur.com/5ylLFA4.png" width={300} />
                 <img src="https://i.imgur.com/m1fTJIG.png" width={150} />
                 <img src="https://i.imgur.com/SMHaUKp.png" width={200} />
-                <img src="https://i.imgur.com/deS49jo.png" width={100} />
+                <img class="rellax2" data-rellax-speed="8" src="https://i.imgur.com/deS49jo.png" width={100} />
             </div>
             <div class="home container unselectable">
                 <div class="row">
@@ -46,7 +58,7 @@ const Default = (props) => {
                 </div>
             </div>
 
-
+            {/* 
             <div class="home container unselectable">
                 <div class="row">
                     <div class="col-12">
@@ -58,7 +70,7 @@ const Default = (props) => {
             </div>
 
 
-            <div class="home container unselectable">
+            {/* <div class="home container unselectable">
                 <div class="row">
                     <div class="col-12">
                         <p>
@@ -66,7 +78,7 @@ const Default = (props) => {
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> 
 
 
             <div class="home container unselectable">
@@ -116,7 +128,7 @@ const Default = (props) => {
                 <div class="row">
                     <div class="col-12">
                         <p>
-                            social media is a bunch of highlights
+                            social media is just highlights
                         </p>
                     </div>
                 </div>
@@ -127,7 +139,7 @@ const Default = (props) => {
                 <div class="row">
                     <div class="col-12">
                         <p>
-                            all manipulated to look like everyone is beautiful, successful and amazing
+                            catered and manipulated to look like everyone is beautiful, successful and amazing
                         </p>
                     </div>
                 </div>
@@ -173,7 +185,7 @@ const Default = (props) => {
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div class="home container unselectable">
                 <div class="row">
@@ -186,7 +198,12 @@ const Default = (props) => {
                             a final collaboration wall at the end of the exhibit.<br></br>Scan
                             the QR code and write away!
                         </p>
-                        <Link to="/Input">Leave a message here!</Link>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <Link style={buttonStyle} to="/Input">Leave a message here!</Link>
                     </div>
                 </div>
             </div>

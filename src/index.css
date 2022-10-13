@@ -18,11 +18,12 @@ code {
 }
 
 
-.Input, .Wall {
+.Input,
+.Wall {
   height: 100vh;
   width: 100%;
   text-align: center;
-  vertical-align:middle;
+  vertical-align: middle;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -56,7 +57,7 @@ h1 {
 .Input textarea {
   border: none;
   width: 100% !important;
-  box-sizing:border-box;
+  box-sizing: border-box;
   margin: auto;
   padding: 10px;
   /* padding-left: 10px;
@@ -91,9 +92,9 @@ h1 {
   background-image: url('https://i.imgur.com/2jCnrZq.png');
   background-size: 115px 25px;
   display: inline-block;
-  width: 115px; 
+  width: 115px;
   height: 25px;
-  content:" ";
+  content: " ";
 }
 
 .iMessageStyle {
@@ -158,7 +159,7 @@ button {
   justify-content: center;
   vertical-align: middle;
   text-align: center;
--webkit-appearance: none;
+  -webkit-appearance: none;
   align-items: center;
 }
 
@@ -173,14 +174,16 @@ button {
 
 @media only screen and (max-width: 500px) {
   .Input h1 {
-    padding-top:20px;
+    padding-top: 20px;
     font-size: 2em !important;
   }
+
   .Input form {
     width: 75% !important;
     align-items: center;
     margin: auto;
   }
+
   .Input #hello {
     height: 150px;
   }
@@ -210,10 +213,12 @@ button {
   width: 300vw;
   perspective: 100px;
 }
+
 .parallax-group {
   height: 100vh;
   transform-style: preserve-3d;
 }
+
 .parallax-layer {
   position: absolute;
   /* top: 100px;

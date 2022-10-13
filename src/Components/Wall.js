@@ -51,7 +51,7 @@ const Wall = (props) => {
                 <div className="responses unselectable parallax-layer rellax" data-rellax-speed="2" style={{ top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>
                   <p class={val.style}>
                     {val.response}</p>
-                  <span class="delivered">Delivered</span>
+                  {/* <span class="delivered">Delivered</span> */}
                   <br></br>
                 </div>
               );
