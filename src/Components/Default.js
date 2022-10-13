@@ -207,7 +207,7 @@ const Default = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
