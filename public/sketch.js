@@ -12,7 +12,7 @@ function preload() {
 }
 
 function setup() {
-  var canvas = createCanvas(windowWidth * 3, windowHeight * 4);
+  var canvas = createCanvas(windowWidth * 3, windowHeight * 3);
   canvas.parent("containerA");
   // img = loadImage("https://i.imgur.com/SMHaUKp.png");
   // img2 = loadImage("https://i.imgur.com/deS49jo.png");
@@ -88,24 +88,24 @@ function randomStuff() {
 }
 
 // mouseMoved
-function mousePressed() {
-  // fill(255, 255, 255, 255);
-  // ellipse(mouseX, mouseY, 50, 50);
-  var value = int(random(1, 4));
-  var sizeRandom = int(random(50, 70));
-  if (value == 1) {
-    image(img, mouseX - 25, mouseY - 25, sizeRandom, sizeRandom);
-  } else if (value == 2) {
-    image(img2, mouseX - 25, mouseY - 25, sizeRandom, sizeRandom);
-  } else if (value == 3) {
-    image(img3, mouseX - 25, mouseY - 25, sizeRandom, sizeRandom);
-  } else if (value == 4) {
-    image(img4, mouseX - 25, mouseY - 25, sizeRandom, sizeRandom);
-  }
-  else if (value == 5) {
-    image(img5, mouseX - 25, mouseY - 25, sizeRandom - 5, sizeRandom - 5);
-  }
-}
+// function mousePressed() {
+//   // fill(255, 255, 255, 255);
+//   // ellipse(mouseX, mouseY, 50, 50);
+//   var value = int(random(1, 4));
+//   var sizeRandom = int(random(50, 70));
+//   if (value == 1) {
+//     image(img, mouseX - 25, mouseY - 25, sizeRandom, sizeRandom);
+//   } else if (value == 2) {
+//     image(img2, mouseX - 25, mouseY - 25, sizeRandom, sizeRandom);
+//   } else if (value == 3) {
+//     image(img3, mouseX - 25, mouseY - 25, sizeRandom, sizeRandom);
+//   } else if (value == 4) {
+//     image(img4, mouseX - 25, mouseY - 25, sizeRandom, sizeRandom);
+//   }
+//   else if (value == 5) {
+//     image(img5, mouseX - 25, mouseY - 25, sizeRandom - 5, sizeRandom - 5);
+//   }
+// }
 
 
 // function windowResized() {
