@@ -23,11 +23,11 @@ const Default = (props) => {
 
     return (
         <div className="Home" id="Home">
-            <div class="containerA rellax2 unselectable" data-rellax-speed="8" id="containerA">
+            <div className="containerA rellax2 unselectable" data-rellax-speed="8" id="containerA">
             </div>
-            <div class="home container unselectable">
-                <div class="row">
-                    <div class="col-12">
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
                         <p>what is your</p>
                         <h1>
                             PERSONA?
@@ -35,22 +35,22 @@ const Default = (props) => {
                     </div>
                 </div>
             </div>
-            <div class="rellax2 unselectable" data-rellax-speed="2" >
-                <img class="rellax" data-rellax-speed="-4" src="https://i.imgur.com/m1fTJIG.png" width={150} />
-                <img class="rellax2" data-rellax-speed="-5" src="https://i.imgur.com/SMHaUKp.png" width={200} />
-                <img class="rellax2" data-rellax-speed="-2" src="https://i.imgur.com/deS49jo.png" width={100} />
+            <div className="rellax2 unselectable" data-rellax-speed="2" >
+                <img className="rellax" data-rellax-speed="-4" src="https://i.imgur.com/m1fTJIG.png" width={150} />
+                <img className="rellax2" data-rellax-speed="-5" src="https://i.imgur.com/SMHaUKp.png" width={200} />
+                <img className="rellax2" data-rellax-speed="-2" src="https://i.imgur.com/deS49jo.png" width={100} />
                 <img src="https://i.imgur.com/SMHaUKp.png" width={200} />
                 <img src="https://i.imgur.com/deS49jo.png" width={100} />
-                <img class="rellax2" data-rellax-speed="4" src="https://i.imgur.com/5ylLFA4.png" width={275} />
+                <img className="rellax2" data-rellax-speed="4" src="https://i.imgur.com/5ylLFA4.png" width={275} />
                 <img src="https://i.imgur.com/m1fTJIG.png" width={150} />
                 <img src="https://i.imgur.com/5ylLFA4.png" width={300} />
                 <img src="https://i.imgur.com/m1fTJIG.png" width={150} />
                 <img src="https://i.imgur.com/SMHaUKp.png" width={200} />
-                <img class="rellax2" data-rellax-speed="8" src="https://i.imgur.com/deS49jo.png" width={100} />
+                <img className="rellax2" data-rellax-speed="8" src="https://i.imgur.com/deS49jo.png" width={100} />
             </div>
-            <div class="home container unselectable">
-                <div class="row">
-                    <div class="col-12">
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
                         <p>
                             definition: the aspect of someone's character that is presented to or perceived by others
                         </p>
@@ -59,9 +59,9 @@ const Default = (props) => {
             </div>
 
             {/* 
-            <div class="home container unselectable">
-                <div class="row">
-                    <div class="col-12">
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
                         <p>
                             does it ever feel like you are wearing a mask?
                         </p>
@@ -70,9 +70,9 @@ const Default = (props) => {
             </div>
 
 
-            {/* <div class="home container unselectable">
-                <div class="row">
-                    <div class="col-12">
+            {/* <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
                         <p>
                             or that to be liked you need to look like a celebrity?
                         </p>
@@ -81,9 +81,9 @@ const Default = (props) => {
             </div> 
 
 
-            <div class="home container unselectable">
-                <div class="row">
-                    <div class="col-12">
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
                         <p>
                             that to be popular you need lots of likes and followers?
                         </p>
@@ -92,9 +92,9 @@ const Default = (props) => {
             </div>
 
 
-            <div class="home container unselectable">
-                <div class="row">
-                    <div class="col-12">
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
                         <p>
                             do you ever feel that the reflection you see in the mirror is not good enough?
                         </p>
@@ -103,9 +103,9 @@ const Default = (props) => {
             </div>
 
 
-            <div class="home container unselectable">
-                <div class="row">
-                    <div class="col-12">
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
                         <p>
                             Platforms like Youtube, Facebook and Instagram portray an image of beauty and perfection
                         </p>
@@ -114,9 +114,9 @@ const Default = (props) => {
             </div>
 
 
-            <div class="home container unselectable">
-                <div class="row">
-                    <div class="col-12">
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
                         <p>
                             one that at times isn't as realistic or healthy as we imagine
                         </p>
@@ -124,9 +124,9 @@ const Default = (props) => {
                 </div>
             </div>
 
-            <div class="home container unselectable">
-                <div class="row">
-                    <div class="col-12">
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
                         <p>
                             social media is just highlights
                         </p>
@@ -135,9 +135,9 @@ const Default = (props) => {
             </div>
 
 
-            <div class="home container unselectable">
-                <div class="row">
-                    <div class="col-12">
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
                         <p>
                             catered and manipulated to look like everyone is beautiful, successful and amazing
                         </p>
@@ -145,9 +145,9 @@ const Default = (props) => {
                 </div>
             </div>
 
-            <div class="home container unselectable">
-                <div class="row">
-                    <div class="col-12">
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
                         <p>
                             realistically they are just like you and me
                         </p>
@@ -155,9 +155,9 @@ const Default = (props) => {
                 </div>
             </div>
 
-            <div class="home container unselectable">
-                <div class="row">
-                    <div class="col-12">
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
                         <p>
                             flaws and everything
                         </p>
@@ -165,9 +165,9 @@ const Default = (props) => {
                 </div>
             </div>
 
-            <div class="home container unselectable">
-                <div class="row">
-                    <div class="col-12">
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
                         <p>
                             as well as your own quirks, specialities and traits
                             <br></br>
@@ -177,9 +177,9 @@ const Default = (props) => {
                 </div>
             </div>
 
-            <div class="home container unselectable">
-                <div class="row">
-                    <div class="col-12">
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
                         <p>
                             YOU
                         </p>
@@ -187,9 +187,9 @@ const Default = (props) => {
                 </div>
             </div> */}
 
-            <div class="home container unselectable">
-                <div class="row">
-                    <div class="col-12">
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
                         <p>
                             We encourage you to leave something behind on this collab wall.
                             <br></br>

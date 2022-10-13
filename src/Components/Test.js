@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Test = (props) => {
     return (
         <div>
-            <div class="containerA " id="containerA">
+            <div className="containerA " id="containerA">
             </div>
         </div>
     );

@@ -30,11 +30,11 @@ const Wall = (props) => {
 
   return (
     <div className="Wall" id="Wall">
-      <div class="containerA w-100 rellax" data-rellax-speed="10" id="containerA">
+      <div className="containerA w-100 rellax" data-rellax-speed="10" id="containerA">
       </div>
 
-      <div class="containerC parallax unselectable">
-        <section class="parallax-group">
+      <div className="containerC parallax unselectable">
+        <section className="parallax-group">
           {responseList.map((val) => {
             if (val.style !== "iMessageStyle") {
               return (
@@ -42,7 +42,7 @@ const Wall = (props) => {
                   <p class={val.style}>
                     {val.response}</p>
                   <br></br>
-                  {/* <span class="delivered">Delivered</span> */}
+                  {/* <span className="delivered">Delivered</span> */}
                 </div>
               );
             }
@@ -51,7 +51,7 @@ const Wall = (props) => {
                 <div className="responses unselectable parallax-layer rellax" data-rellax-speed="2" style={{ top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>
                   <p class={val.style}>
                     {val.response}</p>
-                  {/* <span class="delivered">Delivered</span> */}
+                  {/* <span className="delivered">Delivered</span> */}
                   <br></br>
                 </div>
               );
@@ -60,16 +60,16 @@ const Wall = (props) => {
         </section>
       </div>
 
-      <div class="container containerB unselectable rellax" data-rellax-speed="0.2">
-        <div class="row">
-          <div class="col-12">
+      <div className="container containerB unselectable rellax" data-rellax-speed="0.2">
+        <div className="row">
+          <div className="col-12">
             <h1>
               LEAVE YOUR<br></br>MARK
             </h1>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12">
+        <div className="row">
+          <div className="col-12">
             {/* <p>
               We encourage you to leave something behind on this collab wall.
               <br></br>

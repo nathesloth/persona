@@ -76,24 +76,24 @@ const Input = (props) => {
 
   return (
     <div className="Input">
-      <div class="containerA w-100" id="containerA"></div>
-      <div class="container align-center w-100 containerB unselectable">
-        <div class="row">
-          <div class="col-12">
+      <div className="containerA w-100" id="containerA"></div>
+      <div className="container align-center w-100 containerB unselectable">
+        <div className="row">
+          <div className="col-12">
             <h1>PERSONA</h1>
           </div>
-          <div class="message col-sm-8 col-md-10 align-center">
+          <div className="message col-sm-8 col-md-10 align-center">
             <span>
               Type in an anonymous message to stick to the wall! Style it too to
               make it yours
             </span>
           </div>
         </div>
-        <div class="row hey">
-          <div class="col-8 col-md-8 justify-center">
+        <div className="row hey">
+          <div className="col-8 col-md-8 justify-center">
             <form onSubmit={handleSubmit}>
               {/* <img src="https://img.icons8.com/material-rounded/48/000000/chevron-left.png" /> */}
-              <div class="align-middle">
+              <div className="align-middle">
                 <textarea
                   id="hello"
                   name="text"
@@ -101,7 +101,7 @@ const Input = (props) => {
                   cols="10"
                   wrap="soft"
                   spellCheck="true"
-                  maxlength="400"
+                  maxLength="400"
                   value={response}
                   onInput="this.parentNode.dataset.replicatedValue = this.value"
                   onChange={(event) => {
@@ -113,13 +113,13 @@ const Input = (props) => {
 
               <button type="submit" onClick={addResponse}>
                 <img src="https://img.icons8.com/ios/50/FFFFFF/circled-up-2.png" />
-                {/* <i class="bi bi-arrow-up-circle"></i> */}
+                {/* <i className="bi bi-arrow-up-circle"></i> */}
               </button>
               {/* <Link to="/wall">View the Wall</Link> */}
               {/* <img src="https://img.icons8.com/material-rounded/48/000000/chevron-left.png" /> */}
             </form>
 
-            <div class="btn-group">
+            <div className="btn-group">
               <button onClick={setNone}>None</button>
               <button onClick={setiMessage}>iMessage</button>
               <button onClick={setInsta}>Insta</button>
