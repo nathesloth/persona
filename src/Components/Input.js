@@ -10,9 +10,13 @@ import {
 const Input = (props) => {
   const navigate = useNavigate();
 
+  function changeLocation(placeToGo) {
+    navigate(placeToGo, { replace: true });
+    window.location.reload();
+  }
+
   const [response, setResponse] = useState("");
   const [style, setStyle] = useState("noStyle");
-  const [text, setText] = useState("");
 
   // const addResponse = () => {
   //   Axios.post("http://localhost:3002/api/insert", {
@@ -103,11 +107,9 @@ const Input = (props) => {
                   spellCheck="true"
                   maxLength="400"
                   value={response}
-                  onInput="this.parentNode.dataset.replicatedValue = this.value"
                   onChange={(event) => {
                     setResponse(event.target.value);
                   }}
-                  defaultValue={text}
                 ></textarea>
               </div>
 

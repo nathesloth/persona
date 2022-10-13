@@ -2,12 +2,12 @@ import "../App.css";
 import "../index.css";
 import "../home.css";
 import React, { useState, useEffect } from "react";
-import Rellax from 'rellax';
+import Rellax, { refresh } from 'rellax';
 import { Link } from "react-router-dom";
 
 
 const Default = (props) => {
-
+    console.log(window.location.href);
     const buttonStyle = {
         textDecoration: "none",
         color: "black",
@@ -18,12 +18,13 @@ const Default = (props) => {
     };
 
     useEffect(() => {
-        var rellax = new Rellax('.rellax2', { horizontal: true, vertical: true });
+        var rellax2 = new Rellax('.rellax2', { vertical: true });
     }, [])
+
 
     return (
         <div className="Home" id="Home">
-            <div className="containerA rellax2 unselectable" data-rellax-speed="8" id="containerA">
+            <div className="containerA rellax2" data-rellax-speed="8" id="containerA">
             </div>
             <div className="home container unselectable">
                 <div className="row">

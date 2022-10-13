@@ -4,6 +4,7 @@ let img3;
 let img4;
 let img5;
 
+
 function preload() {
   img = loadImage("https://i.imgur.com/SMHaUKp.png");
   img2 = loadImage("https://i.imgur.com/deS49jo.png");

@@ -39,7 +39,7 @@ const Wall = (props) => {
             if (val.style !== "iMessageStyle") {
               return (
                 <div className="responses unselectable parallax-layer" style={{ top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>
-                  <p class={val.style}>
+                  <p className={val.style}>
                     {val.response}</p>
                   <br></br>
                   {/* <span className="delivered">Delivered</span> */}
@@ -49,7 +49,7 @@ const Wall = (props) => {
             else {
               return (
                 <div className="responses unselectable parallax-layer rellax" data-rellax-speed="2" style={{ top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>
-                  <p class={val.style}>
+                  <p className={val.style}>
                     {val.response}</p>
                   {/* <span className="delivered">Delivered</span> */}
                   <br></br>
