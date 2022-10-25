@@ -17,20 +17,32 @@ const Input = (props) => {
 
   const [response, setResponse] = useState("");
   const [style, setStyle] = useState("noStyle");
-  const [prompt, setPrompt] = useState("");
+
+  // const addResponse = () => {
+  //   Axios.post("http://localhost:3002/api/insert", {
+  //     response: response,
+  //   }).then(() => {
+  //     console.log("success");
+  //   });
+  // };
+
+  // const getResponses = () => {
+  //   Axios.get("http://localhost:3010/responses").then((response) => {
+  //     setResponseList(response.data);
+  //   });
+  // };
 
   const addResponse = () => {
     Axios.post("https://persona-collabwall.herokuapp.com/api/insert", {
       response: response,
       style: style,
-      prompt: prompt,
     }).then(() => {
       console.log("success");
     });
   };
 
   const handleSubmit = (event) => {
-    console.log("Prompt is " + prompt);
+    console.log(style);
     console.log("handleSubmit ran");
     event.preventDefault(); // 👈️ prevent page refresh
 
@@ -66,10 +78,6 @@ const Input = (props) => {
     console.log('button clicked');
   };
 
-  const setPromptT = (event) => {
-    setPrompt(event.target.value);
-  }
-
   return (
     <div className="Input">
       <div className="containerA w-100" id="containerA"></div>
@@ -83,17 +91,6 @@ const Input = (props) => {
               Type in an anonymous message to stick to the wall! Style it too to
               make it yours
             </span>
-          </div>
-          <div className="prompt align-center">
-            <select onChange={setPromptT}>
-              <option value="" disabled selected hidden>Choose a prompt</option>
-              <option value="a">How are you feeling today?</option>
-              <option value="b">Words of inspiration</option>
-              <option value="c">Favourite quote</option>
-              <option value="d">What is your biggest fear or insecurity?</option>
-              <option value="e">What is a secret you are too afraid to tell?</option>
-              <option value="f">Words of advice you want to share with someone</option>
-            </select>
           </div>
         </div>
         <div className="row hey">

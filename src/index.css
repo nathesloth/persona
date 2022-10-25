@@ -49,13 +49,13 @@ h1 {
   background-color: #F3F3F3;
   padding: 10px;
   border-radius: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .Input input[type="text"],
 .Input textarea {
   border: none;
-  width: 55% !important;
+  width: 100% !important;
   box-sizing: border-box;
   margin: auto;
   padding: 10px;
@@ -164,19 +164,6 @@ button {
   align-items: center;
 }
 
-.prompt select {
-  background-color: pink;
-  border: none;
-  outline: none;
-  margin: 10px;
-  padding: 10px;
-  font-size: 0.7em !important;
-  display: inline-flex;
-  font-weight: 400 !important;
-  background-color: #F3F3F3;
-  padding: 10px;
-  border-radius: 20px;
-}
 
 /* img {
   max-width: 200%;

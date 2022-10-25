@@ -24,7 +24,7 @@ const Default = (props) => {
 
     return (
         <div className="Home" id="Home">
-            <div className="containerDefault rellax2" data-rellax-speed="8" id="containerA">
+            <div className="containerA rellax2" data-rellax-speed="8" id="containerA">
             </div>
             <div className="home container unselectable">
                 <div className="row">
