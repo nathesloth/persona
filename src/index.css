@@ -52,7 +52,6 @@ h1 {
   margin-bottom: 15px;
 }
 
-.Input input[type="text"],
 .Input textarea {
   border: none;
   width: 55% !important;
@@ -239,4 +238,8 @@ button {
   right: 0;
   bottom: 0;
   left: 0; */
+}
+
+.testing {
+  z-index: 5;
 }

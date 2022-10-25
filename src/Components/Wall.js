@@ -32,11 +32,22 @@ const Wall = (props) => {
     <div className="Wall" id="Wall">
       <div className="containerA w-100 rellax" data-rellax-speed="10" id="containerA">
       </div>
+      <img src="https://gray-wwbt-prod.cdn.arcpublishing.com/resizer/9-QDoKyfV4H8F0abvgrXhJRqMos=/1200x1800/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/2BNPCSU4ENHWDCZLK4KJU2JC5A.jpg" width={100} style={{ top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }} />
 
       <div className="containerC parallax unselectable">
         <section className="parallax-group">
           {responseList.map((val) => {
-            if (val.style !== "iMessageStyle") {
+            // image
+            if (val.url !== "" && val.url !== null) {
+              return (
+                <div className="responses unselectable parallax-layer" style={{ top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>
+                  <img src={val.url} width={100} />
+                  <p>{val.response}</p>
+                </div>
+              );
+            }
+            // text
+            else if (val.style !== "iMessageStyle" && val.url === "" || val.style !== "iMessageStyle" && val.url === null) {
               return (
                 <div className="responses unselectable parallax-layer" style={{ top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>
                   <p className={val.style}>
@@ -46,7 +57,7 @@ const Wall = (props) => {
                 </div>
               );
             }
-            else {
+            else if (val.style === "iMessageStyle") {
               return (
                 <div className="responses unselectable parallax-layer rellax" data-rellax-speed="2" style={{ top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>
                   <p className={val.style}>
@@ -56,9 +67,18 @@ const Wall = (props) => {
                 </div>
               );
             }
+            // else if (val.url !== "" && val.url !== null) {
+            //   return (
+            //     <div className="responses unselectable parallax-layer" style={{ top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>
+            //       <p>{val.url}</p>
+            //       <img src={val.response} width={100} />
+            //       {/* <span className="delivered">Delivered</span> */}
+            //     </div>
+            //   );
+            // }
           })}
         </section>
-      </div>
+      </div >
 
       <div className="container containerB unselectable rellax" data-rellax-speed="0.2">
         <div className="row">
@@ -81,7 +101,7 @@ const Wall = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

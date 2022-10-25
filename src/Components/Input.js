@@ -16,6 +16,7 @@ const Input = (props) => {
   }
 
   const [response, setResponse] = useState("");
+  const [url, setURL] = useState("");
   const [style, setStyle] = useState("noStyle");
   const [prompt, setPrompt] = useState("");
 
@@ -24,6 +25,7 @@ const Input = (props) => {
       response: response,
       style: style,
       prompt: prompt,
+      url: url,
     }).then(() => {
       console.log("success");
     });
@@ -101,6 +103,9 @@ const Input = (props) => {
         <div className="row hey">
           <div className="col-8 col-md-8 justify-center">
             <form onSubmit={handleSubmit}>
+              <input type="text" value={url} onChange={(event) => {
+                setURL(event.target.value);
+              }}></input>
               {/* <img src="https://img.icons8.com/material-rounded/48/000000/chevron-left.png" /> */}
               <div className="align-middle">
                 <textarea
