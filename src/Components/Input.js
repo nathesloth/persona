@@ -27,7 +27,7 @@ const Input = (props) => {
       prompt: prompt,
       url: url,
     }).then(() => {
-      console.log("success");
+      console.log("Success");
     });
   };
 
@@ -38,11 +38,13 @@ const Input = (props) => {
 
     // 👇️ clear all input values in the form
     setResponse("");
+    setURL("");
+    setStyle("");
+    setPrompt("");
     // navigate('/wall');
   };
 
   const setPromptT = (event) => {
-    console.log(event.target.value);
     setPrompt(event.target.value);
   }
 
@@ -127,7 +129,7 @@ const Input = (props) => {
                   setURL(event.target.value);
                 }}></input>
               }
-              {url != "" &&
+              {url != "" && prompt == "g" &&
                 <div className="imageView">
                   <img src={url} />
                 </div>
@@ -163,6 +165,7 @@ const Input = (props) => {
               <button type="submit" onClick={addResponse}>
                 <img src="https://img.icons8.com/ios/50/FFFFFF/circled-up-2.png" />
               </button>
+              {/* <p>Message uploaded!</p> */}
               {/* <Link to="/wall">View the Wall</Link> */}
               {/* <img src="https://img.icons8.com/material-rounded/48/000000/chevron-left.png" /> */}
             </form>

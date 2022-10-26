@@ -54,7 +54,7 @@ const Wall = (props) => {
             // image
             if (val.url !== "" && val.url !== null) {
               return (
-                <div className="responses unselectable parallax-layer rellax" data-rellax-speed="5" style={{ zIndex: randomPlace(), top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>
+                <div className="image-response responses unselectable parallax-layer rellax" data-rellax-speed="5" style={{ zIndex: randomPlace(), top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>
                   <img className="cropped1" src={val.url} width={100} />
                   <p>{val.response}</p>
                 </div>
@@ -71,7 +71,7 @@ const Wall = (props) => {
                 </div>
               );
             }
-            // text
+            // insta style
             else if (val.style !== "iMessageStyle" && val.url === "" || val.style !== "iMessageStyle" && val.url === null) {
               return (
                 <div className="responses unselectable parallax-layer rellax" data-rellax-speed="7" style={{ zIndex: randomPlace(), top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>

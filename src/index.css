@@ -47,7 +47,15 @@ h1 {
   /* height of container */
   object-fit: cover;
   border: 5px solid white;
+  background-color: white;
   border-radius: 5px;
+  margin-bottom: none !important;
+}
+
+.image-response p {
+  background-color: white !important;
+  width: 85%;
+  margin-top: none !important;
 }
 
 .Input .message {
@@ -102,8 +110,13 @@ input[type="text"]::placeholder {
   display: flex;
   justify-content: left;
   align-items: center;
-  width: 300px;
+  width: 400px;
+  height: fit-content;
 }
+
+/* .instaStyle p {
+  width: 100px;
+} */
 
 .instaStyle::before {
   background-image: url('https://i.imgur.com/2jCnrZq.png');
@@ -254,6 +267,7 @@ button {
   font-size: 0.9em;
   margin: 0 !important;
   position: absolute;
+  height: fit-content;
 }
 
 /* ------------------------------------------ */
