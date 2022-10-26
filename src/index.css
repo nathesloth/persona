@@ -230,6 +230,11 @@ button {
 
   .Input #hello {
     height: 150px;
+    width: 100% !important;
+  }
+
+  .Input form {
+    position: relative !important;
   }
 }
 
