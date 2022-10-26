@@ -120,6 +120,11 @@ circle,
     width: 80% !important;
     align-items: center;
   }
+
+  .Input input[type="text"] {
+    width: 100% !important;
+    align-items: center;
+  }
 }
 
 @media only screen and (min-width: 600px) {

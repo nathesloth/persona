@@ -38,7 +38,7 @@ const Input = (props) => {
 
     // 👇️ clear all input values in the form
     setResponse("");
-    navigate('/wall');
+    // navigate('/wall');
   };
 
   const setPromptT = (event) => {
@@ -49,28 +49,44 @@ const Input = (props) => {
   /* ------------------------------------------ */
   // Setting the Styles of Each Button
 
+  const selectStyle = (event) => {
+    if (event.target.value === "none") {
+      document.getElementById("hello").className = "noStyle";
+      setStyle("noStyle");
+    }
+    else if (event.target.value === "insta") {
+      document.getElementById("hello").className = "instaStyle";
+      setStyle("instaStyle");
+    }
+    else if (event.target.value === "imessage") {
+      document.getElementById("hello").className = "iMessageStyle";
+      setStyle("iMessageStyle");
+    }
+    else if (event.target.value === "note") {
+      document.getElementById("hello").className = "noteStyle";
+      setStyle("noteStyle");
+    }
+  }
+
+
   const setNone = () => {
     document.getElementById("hello").className = "noStyle";
     setStyle("noStyle");
-    console.log('button clicked');
   };
 
   const setInsta = () => {
     document.getElementById("hello").className = "instaStyle";
     setStyle("instaStyle");
-    console.log('button clicked');
   };
 
   const setiMessage = () => {
     document.getElementById("hello").className = "iMessageStyle";
     setStyle("iMessageStyle");
-    console.log('button clicked');
   };
 
   const setNote = () => {
     document.getElementById("hello").className = "noteStyle";
     setStyle("noteStyle");
-    console.log('button clicked');
   };
 
   return (
@@ -97,16 +113,26 @@ const Input = (props) => {
               <option value="d">What is your biggest fear or insecurity?</option>
               <option value="e">What is a secret you are too afraid to tell?</option>
               <option value="f">Words of advice you want to share with someone</option>
+              <option value="g">Image Prompt</option>
             </select>
           </div>
         </div>
         <div className="row hey">
           <div className="col-8 col-md-8 justify-center">
             <form onSubmit={handleSubmit}>
-              <input type="text" value={url} onChange={(event) => {
-                setURL(event.target.value);
-              }}></input>
-              {/* <img src="https://img.icons8.com/material-rounded/48/000000/chevron-left.png" /> */}
+              {/* Only add when selecting image */}
+
+              {prompt == "g" &&
+                <input class="url" type="text" placeholder="Insert a URL to an image" value={url} onChange={(event) => {
+                  setURL(event.target.value);
+                }}></input>
+              }
+              {url != "" &&
+                <div className="imageView">
+                  <img src={url} />
+                </div>
+              }
+
               <div className="align-middle">
                 <textarea
                   id="hello"
@@ -115,7 +141,8 @@ const Input = (props) => {
                   cols="10"
                   wrap="soft"
                   spellCheck="true"
-                  maxLength="400"
+                  maxLength="300"
+                  placeholder="Type your thought"
                   value={response}
                   onChange={(event) => {
                     setResponse(event.target.value);
@@ -123,20 +150,29 @@ const Input = (props) => {
                 ></textarea>
               </div>
 
+              <div className="prompt align-center">
+                <select onChange={selectStyle}>
+                  <option value="" disabled selected hidden>Choose a style</option>
+                  <option value="none">None</option>
+                  <option value="insta">Instagram</option>
+                  <option value="imessage">Text Bubble</option>
+                  <option value="note">Note</option>
+                </select>
+              </div>
+
               <button type="submit" onClick={addResponse}>
                 <img src="https://img.icons8.com/ios/50/FFFFFF/circled-up-2.png" />
-                {/* <i className="bi bi-arrow-up-circle"></i> */}
               </button>
               {/* <Link to="/wall">View the Wall</Link> */}
               {/* <img src="https://img.icons8.com/material-rounded/48/000000/chevron-left.png" /> */}
             </form>
 
-            <div className="btn-group">
+            {/* <div className="btn-group">
               <button onClick={setNone}>None</button>
               <button onClick={setiMessage}>iMessage</button>
               <button onClick={setInsta}>Insta</button>
               <button onClick={setNote}>Note</button>
-            </div>
+            </div> */}
 
           </div>
         </div>

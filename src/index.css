@@ -40,6 +40,16 @@ h1 {
   text-align: center;
 }
 
+.cropped1 {
+  width: 200px;
+  /* width of container */
+  height: 200px;
+  /* height of container */
+  object-fit: cover;
+  border: 5px solid white;
+  border-radius: 5px;
+}
+
 .Input .message {
   font-size: 0.7em !important;
   width: 50% !important;
@@ -49,7 +59,12 @@ h1 {
   background-color: #F3F3F3;
   padding: 10px;
   border-radius: 20px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
+}
+
+input[type="text"]::placeholder {
+  font-size: 0.8em !important;
+  color: black !important;
 }
 
 .Input textarea {
@@ -77,6 +92,10 @@ h1 {
 
 /* Testing Changing the Div */
 
+.noStyle {
+  background-color: #f8eded !important;
+}
+
 .instaStyle {
   background-color: white !important;
   font-weight: 400 !important;
@@ -100,12 +119,24 @@ h1 {
   border-radius: 1.2em !important;
   color: white !important;
   width: 200px;
+  transition: background-color 1s ease;
+}
 
+
+.iMessageStyle:hover {
+  background-color: #76a0ee !important;
+  transition: background-color 0.5s ease;
 }
 
 .noteStyle {
   background-color: #ffef9f !important;
   width: 200px;
+  transition: background-color 1s ease;
+}
+
+.noteStyle:hover {
+  background-color: #faba5a !important;
+  transition: background-color 0.5s ease;
 }
 
 .parallax-group .delivered {
@@ -242,4 +273,51 @@ button {
 
 .testing {
   z-index: 5;
+}
+
+.dropbtn {
+  right: 0;
+  bottom: 0;
+  background-color: lavender;
+  position: fixed;
+  z-index: 4;
+  padding: 1em;
+  border-radius: 5em;
+  margin: 20px;
+  border: none;
+}
+
+.dropbtn img {
+  height: 2.1em;
+}
+
+.dropdown {
+  z-index: 4;
+}
+
+.dropdown-content {
+  right: 5em;
+  position: fixed;
+}
+
+input[type="text"] {
+  background-color: #F3F3F3;
+  border: none;
+  width: 50% !important;
+  padding: 0.8em;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.imageView {
+  width: 300px;
+  height: 150px;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 5px;
+  margin-bottom: 0;
+}
+
+.imageView img {
+  width: 100%;
 }
