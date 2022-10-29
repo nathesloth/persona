@@ -76,8 +76,6 @@ const Input = (props) => {
     setPrompt(event.target.value);
   }
 
-
-
   function selectRandomPrompt() {
     setRandomNumber(Math.floor(Math.random() * (prompts.length)));
   };
