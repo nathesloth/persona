@@ -22,6 +22,7 @@ const Default = (props) => {
     }, [])
 
 
+
     return (
         <div className="Home" id="Home">
             <div className="containerDefault rellax2" data-rellax-speed="8" id="containerA">
