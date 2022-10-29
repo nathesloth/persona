@@ -54,23 +54,57 @@ const Default = (props) => {
                 <div className="row">
                     <div className="col-12">
                         <p>
-                            definition: the aspect of someone's character that is presented to or perceived by others
+                            PERSONA <br></br>
+                            the aspect of someone's character that is presented to or perceived by others
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
+                        <p>
+                            "Social media has changed the way we live our lives. From the way we get our news to the way we interact with our loved ones. Social media is everywhere. It’s unavoidable, it’s powerful, and it’s here to stay. "
+                            <br></br>
+                            Maryan Mohsin
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
+                        <p>
+                            On average, a teenager spends over 18 Hours online.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
+                        <p>
+                            Research also suggests that the amount of time spent on these social media platforms has an immense impact on mental health, body image issues, self harm and disordered eating, in children and teens.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className="home container unselectable">
+                <div className="row">
+                    <div className="col-12">
+                        <p>
+                            PERSONA was designed to create a space for viewers to share thoughts that may be too vulnerable to say aloud.
                         </p>
                     </div>
                 </div>
             </div>
 
             {/* 
-            <div className="home container unselectable">
-                <div className="row">
-                    <div className="col-12">
-                        <p>
-                            does it ever feel like you are wearing a mask?
-                        </p>
-                    </div>
-                </div>
-            </div>
-
 
             {/* <div className="home container unselectable">
                 <div className="row">
@@ -195,12 +229,11 @@ const Default = (props) => {
                         <p>
                             We encourage you to leave something behind on this collab wall.
                             <br></br>
-                            This may be a message, words of inspiration or something
-                            completely random.<br></br>All messages placed will be curated in
-                            a final collaboration wall at the end of the exhibit.<br></br>Scan
-                            the QR code and write away!
+                            These messages are anonymous, but we believe that any thoughts, words and stories can help others.
                         </p>
                         <br></br>
+                        <br></br>
+                        <p>Press here</p>
                         <br></br>
                         <br></br>
                         <br></br>

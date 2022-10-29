@@ -22,12 +22,31 @@ const Input = (props) => {
   const [prompt, setPrompt] = useState("");
   const [randomNumber, setRandomNumber] = useState(0);
 
-  const prompts = ["How are you feeling today?", 
-  "What do you miss most about yourself?", 
-  "Words of inspiration",
-    "What is your biggest insecurity or fear?", 
+  const prompts = ["How are you feeling, really?",
+    "What do you miss most about yourself?",
+    "Words of inspiration",
+    "What is your biggest insecurity or fear?",
     "Words of advice you would like to share with someone",
-    "What is a secret you are too afraid to tell?"];
+    "What is a secret you are too afraid to tell?",
+    "What do you wish could be better?",
+    "What is something you don't tell anyone",
+    "What is your something that makes your unique",
+    "What is your superpower?",
+    "If you were a millionaire, what would you do with the money?",
+    "What is your idea of happiness?",
+    "What do you define as success?",
+    "What are you looking forward to this week",
+    "When was the moment you felt most alive?",
+    "what are you scared to share with people",
+    "What's taking up most of your headspace right now?",
+    "What did you do today that made you feel good",
+    "What are you grateful for?",
+    "If you could do anything, what would you do?",
+    "What was your dream as a child? Have you fulfilled that dream?",
+    "What does self-love mean to you?",
+    "What brings you joy?",
+    "What is something you would say to your younger self?",
+    "What was a life changing moment for you?"];
 
   const addResponse = () => {
     Axios.post("https://persona-collabwall.herokuapp.com/api/insert", {
@@ -60,7 +79,7 @@ const Input = (props) => {
 
 
   function selectRandomPrompt() {
-    setRandomNumber(Math.floor(Math.random() * (prompts.length - 1 - 0 + 1) + 0));
+    setRandomNumber(Math.floor(Math.random() * (prompts.length)));
   };
 
 
@@ -68,6 +87,9 @@ const Input = (props) => {
   // Setting the Styles of Each Button
 
   const selectStyle = (event) => {
+    if (event.target.value !== "image") {
+      setPrompt("");
+    }
     if (event.target.value === "none") {
       document.getElementById("hello").className = "noStyle";
       setStyle("noStyle");
@@ -83,6 +105,9 @@ const Input = (props) => {
     else if (event.target.value === "note") {
       document.getElementById("hello").className = "noteStyle";
       setStyle("noteStyle");
+    }
+    else if (event.target.value === "image") {
+      setPrompt("g");
     }
   }
 
@@ -122,7 +147,7 @@ const Input = (props) => {
             </span>
           </div>
 
-          <div className="prompt align-center">
+          {/* <div className="prompt align-center">
             <select onChange={setPromptT}>
               <option value="" disabled selected hidden>Choose a prompt</option>
               <option value="a">How are you feeling today?</option>
@@ -133,23 +158,11 @@ const Input = (props) => {
               <option value="f">Words of advice you want to share with someone</option>
               <option value="g">Image Prompt</option>
             </select>
-          </div>
+          </div> */}
         </div>
         <div className="row hey">
           <div className="col-8 col-md-8 justify-center">
             <form onSubmit={handleSubmit}>
-              {/* Only add when selecting image */}
-
-              {prompt == "g" &&
-                <input class="url" type="text" placeholder="Insert a URL to an image" value={url} onChange={(event) => {
-                  setURL(event.target.value);
-                }}></input>
-              }
-              {url != "" && prompt == "g" &&
-                <div className="imageView">
-                  <img src={url} />
-                </div>
-              }
 
               <div className="align-middle">
                 <textarea
@@ -167,6 +180,19 @@ const Input = (props) => {
                   }}
                 ></textarea>
               </div>
+              {/* Only add when selecting image */}
+
+              {prompt == "g" &&
+                <input class="url" type="text" placeholder="Insert a URL to an image" value={url} onChange={(event) => {
+                  setURL(event.target.value);
+                }}></input>
+              }
+              {url != "" && prompt == "g" &&
+                <div className="imageView">
+                  <img src={url} />
+                </div>
+              }
+
 
               <div className="prompt align-center">
                 <select onChange={selectStyle}>
@@ -175,6 +201,7 @@ const Input = (props) => {
                   <option value="insta">Instagram</option>
                   <option value="imessage">Text Bubble</option>
                   <option value="note">Note</option>
+                  <option value="image">Image</option>
                 </select>
               </div>
 
