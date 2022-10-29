@@ -7,6 +7,7 @@ import {
   useNavigate
 } from "react-router-dom";
 
+
 const Input = (props) => {
   const navigate = useNavigate();
 
@@ -19,6 +20,14 @@ const Input = (props) => {
   const [url, setURL] = useState("");
   const [style, setStyle] = useState("noStyle");
   const [prompt, setPrompt] = useState("");
+  const [randomNumber, setRandomNumber] = useState(0);
+
+  const prompts = ["How are you feeling today?", 
+  "What do you miss most about yourself?", 
+  "Words of inspiration",
+    "What is your biggest insecurity or fear?", 
+    "Words of advice you would like to share with someone",
+    "What is a secret you are too afraid to tell?"];
 
   const addResponse = () => {
     Axios.post("https://persona-collabwall.herokuapp.com/api/insert", {
@@ -47,6 +56,13 @@ const Input = (props) => {
   const setPromptT = (event) => {
     setPrompt(event.target.value);
   }
+
+
+
+  function selectRandomPrompt() {
+    setRandomNumber(Math.floor(Math.random() * (prompts.length - 1 - 0 + 1) + 0));
+  };
+
 
   /* ------------------------------------------ */
   // Setting the Styles of Each Button
@@ -92,7 +108,7 @@ const Input = (props) => {
   };
 
   return (
-    <div className="Input">
+    <div className="Input" onLoad={selectRandomPrompt}>
       <div className="containerA w-100" id="containerA"></div>
       <div className="container align-center w-100 containerB unselectable">
         <div className="row">
@@ -144,7 +160,7 @@ const Input = (props) => {
                   wrap="soft"
                   spellCheck="true"
                   maxLength="300"
-                  placeholder="Type your thought"
+                  placeholder={prompts[randomNumber]}
                   value={response}
                   onChange={(event) => {
                     setResponse(event.target.value);

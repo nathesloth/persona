@@ -32,6 +32,66 @@ function draw() {
   // image(img, 0, 0);
   // background('rgba(250,248,248, 0.4)');// to make it gradually disappear changes
   //randomStuff();
+  // randomPlacement();
+}
+
+function randomPlacement() {
+  for (var i = 0; i < 5; i++) {
+
+    var value = int(random(1, 5));
+    var sizeRandom = int(random(50, 70));
+    if (value == 1) {
+      push();
+      rotate(PI / int(random(-30, 30)));
+      image(
+        img,
+        int(random(0, windowWidth)),
+        int(random(0, windowHeight)),
+        sizeRandom,
+        sizeRandom
+      );
+      pop();
+    } else if (value == 2) {
+      push();
+      rotate(PI / int(random(-30, 30)));
+      image(
+        img2,
+        int(random(0, windowWidth)),
+        int(random(0, windowHeight)),
+        sizeRandom,
+        sizeRandom
+      );
+      pop();
+    } else if (value == 3) {
+      push();
+      rotate(PI / int(random(-30, 30)));
+      image(
+        img3,
+        int(random(0, windowWidth)),
+        int(random(0, windowHeight)),
+        sizeRandom,
+        sizeRandom
+      );
+      pop();
+    } else if (value == 4) {
+      push();
+      rotate(PI / int(random(-30, 30)));
+      image(
+        img4,
+        int(random(0, windowWidth)),
+        int(random(0, windowHeight)),
+        sizeRandom,
+        sizeRandom
+      );
+      pop();
+    }
+    else if (value == 5) {
+      push();
+      rotate(PI / int(random(-30, 30)));
+      image(img5, int(random(0, windowWidth)), int(random(0, windowHeight)), sizeRandom - 5, sizeRandom - 5);
+      pop();
+    }
+  }
 }
 
 function randomStuff() {

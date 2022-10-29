@@ -31,6 +31,7 @@ const Wall = (props) => {
     return Math.random() * 4;
   }
 
+
   return (
     <div className="Wall" id="Wall">
       <div class="dropdown">
