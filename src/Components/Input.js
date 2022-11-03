@@ -22,7 +22,7 @@ const Input = (props) => {
   const [prompt, setPrompt] = useState("");
   const [randomNumber, setRandomNumber] = useState(0);
 
-  const prompts = ["How are you feeling, really?",
+  const prompts = ["", "How are you feeling, really?",
     "What do you miss most about yourself?",
     "Words of inspiration",
     "What is your biggest insecurity or fear?",
@@ -178,6 +178,19 @@ const Input = (props) => {
                   }}
                 ></textarea>
               </div>
+
+              <div className="prompt align-center">
+                <select onChange={selectStyle}>
+                  <option value="" disabled selected hidden>Choose a style</option>
+                  <option value="none">None</option>
+                  <option value="insta">Instagram</option>
+                  <option value="imessage">Text Bubble</option>
+                  <option value="note">Note</option>
+                  <option value="image">Image</option>
+                </select>
+              </div>
+
+
               {/* Only add when selecting image */}
 
               {prompt == "g" &&
@@ -190,18 +203,6 @@ const Input = (props) => {
                   <img src={url} />
                 </div>
               }
-
-
-              <div className="prompt align-center">
-                <select onChange={selectStyle}>
-                  <option value="" disabled selected hidden>Choose a style</option>
-                  <option value="none">None</option>
-                  <option value="insta">Instagram</option>
-                  <option value="imessage">Text Bubble</option>
-                  <option value="note">Note</option>
-                  <option value="image">Image</option>
-                </select>
-              </div>
 
               <button type="submit" onClick={addResponse}>
                 <img src="https://img.icons8.com/ios/50/FFFFFF/circled-up-2.png" />

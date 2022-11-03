@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
 body {
   margin: 0;
@@ -96,6 +98,10 @@ input[type="text"]::placeholder {
   outline: none !important;
 }
 
+.imagesWall {
+  position: relative !important;
+}
+
 /* Adding in different aesthetics */
 /* ------------------------------------------ */
 
@@ -103,6 +109,7 @@ input[type="text"]::placeholder {
 
 .noStyle {
   background-color: #f8eded !important;
+  width: 300px !important;
 }
 
 .instaStyle {
@@ -146,6 +153,10 @@ input[type="text"]::placeholder {
   background-color: #ffef9f !important;
   width: 200px;
   transition: background-color 1s ease;
+  font-family: 'Pangolin', cursive;
+  font-size: 1em !important;
+  padding: 10px;
+  border-radius: 5px !important;
 }
 
 .noteStyle:hover {
