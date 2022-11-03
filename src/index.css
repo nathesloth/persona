@@ -68,7 +68,7 @@ h1 {
   background-color: #F3F3F3;
   padding: 10px;
   border-radius: 20px;
-  /* margin-bottom: 15px; */
+  margin-bottom: 15px;
 }
 
 input[type="text"]::placeholder {
