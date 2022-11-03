@@ -30,7 +30,7 @@ const Input = (props) => {
     "What is a secret you are too afraid to tell?",
     "What do you wish could be better?",
     "What is something you don't tell anyone",
-    "What is your something that makes your unique?",
+    "What is your something that makes you unique?",
     "What is your superpower?",
     "If you were a millionaire, what would you do with the money?",
     "What is your idea of happiness?",
@@ -69,7 +69,7 @@ const Input = (props) => {
     setURL("");
     setStyle("");
     setPrompt("");
-    // navigate('/wall');
+    navigate('/submitted');
   };
 
   const setPromptT = (event) => {

@@ -54,7 +54,7 @@ const Default = (props) => {
                 <div className="row">
                     <div className="col-12">
                         <p>
-                            PERSONA <br></br>
+                            <b>PERSONA</b> <br></br>
                             the aspect of someone's character that is presented to or perceived by others
                         </p>
                     </div>
@@ -77,7 +77,7 @@ const Default = (props) => {
                 <div className="row">
                     <div className="col-12">
                         <p>
-                            On average, a teenager spends over 18 Hours online.
+                            The average teenager spends over 18 Hours online a week.
                         </p>
                     </div>
                 </div>
@@ -98,63 +98,7 @@ const Default = (props) => {
                 <div className="row">
                     <div className="col-12">
                         <p>
-                            PERSONA was designed to create a space for viewers to share thoughts that may be too vulnerable to say aloud.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            {/* 
-
-            {/* <div className="home container unselectable">
-                <div className="row">
-                    <div className="col-12">
-                        <p>
-                            or that to be liked you need to look like a celebrity?
-                        </p>
-                    </div>
-                </div>
-            </div> 
-
-
-            <div className="home container unselectable">
-                <div className="row">
-                    <div className="col-12">
-                        <p>
-                            that to be popular you need lots of likes and followers?
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div className="home container unselectable">
-                <div className="row">
-                    <div className="col-12">
-                        <p>
-                            do you ever feel that the reflection you see in the mirror is not good enough?
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div className="home container unselectable">
-                <div className="row">
-                    <div className="col-12">
-                        <p>
-                            Platforms like Youtube, Facebook and Instagram portray an image of beauty and perfection
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div className="home container unselectable">
-                <div className="row">
-                    <div className="col-12">
-                        <p>
-                            one that at times isn't as realistic or healthy as we imagine
+                            By seeing perfect individuals and the amazing lives of others, we may therefore sometimes feel we need to present a version of ourselves that isn't entirely authentic.
                         </p>
                     </div>
                 </div>
@@ -164,18 +108,7 @@ const Default = (props) => {
                 <div className="row">
                     <div className="col-12">
                         <p>
-                            social media is just highlights
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div className="home container unselectable">
-                <div className="row">
-                    <div className="col-12">
-                        <p>
-                            catered and manipulated to look like everyone is beautiful, successful and amazing
+                            You may call it a facade or mask that we use to hide our true selves.
                         </p>
                     </div>
                 </div>
@@ -185,43 +118,11 @@ const Default = (props) => {
                 <div className="row">
                     <div className="col-12">
                         <p>
-                            realistically they are just like you and me
+                            PERSONA was designed to create a space for onlookers and viewers to share thoughts anonymously that may be too vulnerable to say aloud.
                         </p>
                     </div>
                 </div>
             </div>
-
-            <div className="home container unselectable">
-                <div className="row">
-                    <div className="col-12">
-                        <p>
-                            flaws and everything
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div className="home container unselectable">
-                <div className="row">
-                    <div className="col-12">
-                        <p>
-                            as well as your own quirks, specialities and traits
-                            <br></br>
-                            that make you
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div className="home container unselectable">
-                <div className="row">
-                    <div className="col-12">
-                        <p>
-                            YOU
-                        </p>
-                    </div>
-                </div>
-            </div> */}
 
             <div className="home container unselectable">
                 <div className="row">
