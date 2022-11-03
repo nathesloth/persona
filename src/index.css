@@ -271,6 +271,21 @@ button {
   height: fit-content;
 }
 
+.containerD h1 {
+  font-size: 1.5em !important;
+  width: 50%;
+  margin: auto;
+  height: 100vh;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.containerD {
+  height: 100vh;
+  vertical-align: middle;
+  position: fixed;
+}
+
 /* ------------------------------------------ */
 .parallax {
   height: 200vh;

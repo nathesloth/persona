@@ -16,7 +16,8 @@ function setup() {
   var canvas = createCanvas(windowWidth * 3, windowHeight * 4);
   canvas.parent("containerA");
   var canvasDefault = createCanvas(windowWidth, windowHeight);
-  canvas.parent("containerDefault");
+  canvasDefault.parent("containerDefault");
+  canvasDefault.parent("containerD");
   // img = loadImage("https://i.imgur.com/SMHaUKp.png");
   // img2 = loadImage("https://i.imgur.com/deS49jo.png");
   // img3 = loadImage("https://i.imgur.com/5ylLFA4.png");

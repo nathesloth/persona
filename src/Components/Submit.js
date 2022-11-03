@@ -8,10 +8,10 @@ import { Link } from "react-router-dom";
 const Submit = (props) => {
     return (
         <div className="Wall">
-            <div className="container containerB unselectable" data-rellax-speed="0.2">
+            <div className="container containerD unselectable" data-rellax-speed="0.2">
                 <div className="row">
                     <div className="col-12">
-                        <h1>Submitted! Thanks for leaving your mark</h1>
+                        <h1>Submitted!<br></br>Thanks for <br></br>leaving your mark</h1>
                     </div>
                 </div>
             </div>
