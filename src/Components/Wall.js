@@ -94,7 +94,6 @@ const Wall = (props) => {
                   <p className={val.style}>
                     {val.response}</p>
                   <br></br>
-                  {/* <span className="delivered">Delivered</span> */}
                 </div>
               );
             }
@@ -105,7 +104,6 @@ const Wall = (props) => {
                   <p className={val.style}>
                     {val.response}</p>
                   <br></br>
-                  {/* <span className="delivered">Delivered</span> */}
                 </div>
               );
             }
@@ -114,7 +112,6 @@ const Wall = (props) => {
                 <div className="responses unselectable parallax-layer rellax" data-rellax-speed="2" style={{ zIndex: randomPlace(), top: returnRandomHeight() + 'px', left: returnRandomWidth() + 'px' }}>
                   <p className={val.style}>
                     {val.response}</p>
-                  {/* <span className="delivered">Delivered</span> */}
                   <br></br>
                 </div>
               );

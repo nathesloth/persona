@@ -19,6 +19,8 @@ const Default = (props) => {
 
     useEffect(() => {
         var rellax2 = new Rellax('.rellax2', { vertical: true });
+        var rellax3 = new Rellax('.rellax3', { vertical: true });
+
     }, [])
 
 
@@ -73,6 +75,11 @@ const Default = (props) => {
                 </div>
             </div>
 
+
+            <div className="rellax3 unselectable" data-rellax-speed="7" >
+                <img className="rellax3 phone" data-rellax-speed="4" src="https://i.imgur.com/B6Gt4AC.png" width={200} />
+            </div>
+
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
@@ -93,6 +100,9 @@ const Default = (props) => {
                 </div>
             </div>
 
+            <div className="rellax3 unselectable" data-rellax-speed="7" >
+                <img className="rellax3 time" data-rellax-speed="8" src="https://i.imgur.com/ZkfOweW.png" width={300} />
+            </div>
 
             <div className="home container unselectable">
                 <div className="row">
@@ -103,6 +113,11 @@ const Default = (props) => {
                     </div>
                 </div>
             </div>
+
+            <div className="rellax3 unselectable" data-rellax-speed="7" >
+                <img className="rellax3 face" data-rellax-speed="-5" src="https://i.imgur.com/SMHaUKp.png" width={200} />
+            </div>
+
 
             <div className="home container unselectable">
                 <div className="row">
@@ -124,6 +139,10 @@ const Default = (props) => {
                 </div>
             </div>
 
+            <div className="rellax3 unselectable" data-rellax-speed="7" >
+                <img className="rellax3" data-rellax-speed="4" src="https://i.imgur.com/deS49jo.png" width={100} />
+            </div>
+
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
@@ -143,7 +162,7 @@ const Default = (props) => {
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     );
 };
 

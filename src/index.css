@@ -122,10 +122,6 @@ input[type="text"]::placeholder {
   height: fit-content;
 }
 
-/* .instaStyle p {
-  width: 100px;
-} */
-
 .instaStyle::before {
   background-image: url('https://i.imgur.com/2jCnrZq.png');
   background-size: 115px 25px;
@@ -273,7 +269,6 @@ button {
 }
 
 .containerC .responses p {
-  /* background-color: pink; */
   padding: 15px;
   border-radius: 10px;
   font-size: 0.9em;
@@ -311,10 +306,6 @@ button {
 
 .parallax-layer {
   position: absolute;
-  /* top: 100px;
-  right: 0;
-  bottom: 0;
-  left: 0; */
 }
 
 .testing {
@@ -366,4 +357,22 @@ input[type="text"] {
 
 .imageView img {
   width: 100%;
+}
+
+
+.rellax3 {
+  display: block;
+  height: auto;
+  position: absolute;
+  padding: 10px;
+
+}
+
+.phone {
+  top: 1900px;
+  left: 300px;
+}
+
+.time {
+  top: 3500px;
 }
