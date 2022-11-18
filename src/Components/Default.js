@@ -4,7 +4,7 @@ import "../home.css";
 import React, { useState, useEffect } from "react";
 import Rellax, { refresh } from 'rellax';
 import { Link } from "react-router-dom";
-import ScrollAnimation from 'react-animate-on-scroll';
+
 
 const Default = (props) => {
     console.log(window.location.href);
@@ -33,11 +33,9 @@ const Default = (props) => {
                 <div className="row">
                     <div className="col-12">
                         <p>what is your</p>
-                        <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut'>
-                            <h1>
-                                PERSONA?
-                            </h1>
-                        </ScrollAnimation>
+                        <h1>
+                            PERSONA?
+                        </h1>
                     </div>
                 </div>
             </div>
@@ -57,12 +55,10 @@ const Default = (props) => {
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
-                        <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut'>
-                            <p>
-                                <b>PERSONA</b> <br></br>
-                                the aspect of someone's character that is presented to or perceived by others
-                            </p>
-                        </ScrollAnimation>
+                        <p>
+                            <b>PERSONA</b> <br></br>
+                            the aspect of someone's character that is presented to or perceived by others
+                        </p>
                     </div>
                 </div>
             </div>
@@ -70,13 +66,11 @@ const Default = (props) => {
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
-                        <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut'>
-                            <p>
-                                "Social media has changed the way we live our lives. From the way we get our news to the way we interact with our loved ones. Social media is everywhere. It’s unavoidable, it’s powerful, and it’s here to stay. "
-                                <br></br>
-                                Maryan Mohsin
-                            </p>
-                        </ScrollAnimation>
+                        <p>
+                            "Social media has changed the way we live our lives. From the way we get our news to the way we interact with our loved ones. Social media is everywhere. It’s unavoidable, it’s powerful, and it’s here to stay. "
+                            <br></br>
+                            Maryan Mohsin
+                        </p>
                     </div>
                 </div>
             </div>
@@ -89,11 +83,9 @@ const Default = (props) => {
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
-                        <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut'>
-                            <p>
-                                The average teenager spends over 18 Hours online a week.
-                            </p>
-                        </ScrollAnimation>
+                        <p>
+                            The average teenager spends over 18 Hours online a week.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -101,11 +93,9 @@ const Default = (props) => {
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
-                        <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut'>
-                            <p>
-                                Research also suggests that the amount of time spent on these social media platforms has an immense impact on mental health, body image issues, self harm and disordered eating, in children and teens.
-                            </p>
-                        </ScrollAnimation>
+                        <p>
+                            Research also suggests that the amount of time spent on these social media platforms has an immense impact on mental health, body image issues, self harm and disordered eating, in children and teens.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -117,11 +107,9 @@ const Default = (props) => {
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
-                        <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut'>
-                            <p>
-                                By seeing perfect individuals and the amazing lives of others, we may therefore sometimes feel we need to present a version of ourselves that isn't entirely authentic.
-                            </p>
-                        </ScrollAnimation>
+                        <p>
+                            By seeing perfect individuals and the amazing lives of others, we may therefore sometimes feel we need to present a version of ourselves that isn't entirely authentic.
+                        </p>
                     </div>
                 </div>
             </div>
