@@ -1,7 +1,8 @@
 import "../App.css";
 import "../index.css";
 import "../home.css";
-import 'animate.css';
+import "animate.css";
+import ScrollAnimation from 'react-animate-on-scroll';
 import React, { useState, useEffect } from "react";
 import Rellax, { refresh } from 'rellax';
 import { Link } from "react-router-dom";
@@ -33,10 +34,13 @@ const Default = (props) => {
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
-                        <p class="animate__fadeIn animate__fadeOut">what is your</p>
-                        <h1>
-                            PERSONA?
-                        </h1>
+                        <ScrollAnimation animateIn='fadeIn'
+                            animateOut='fadeOut'>
+                            <p class="animate__fadeIn animate__fadeOut">what is your</p>
+                            <h1>
+                                PERSONA?
+                            </h1>
+                        </ScrollAnimation>
                     </div>
                 </div>
             </div>
