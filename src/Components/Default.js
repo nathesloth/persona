@@ -1,6 +1,7 @@
 import "../App.css";
 import "../index.css";
 import "../home.css";
+import 'animate.css';
 import React, { useState, useEffect } from "react";
 import Rellax, { refresh } from 'rellax';
 import { Link } from "react-router-dom";
@@ -32,7 +33,7 @@ const Default = (props) => {
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
-                        <p>what is your</p>
+                        <p class="animate__fadeIn animate__fadeOut">what is your</p>
                         <h1>
                             PERSONA?
                         </h1>
