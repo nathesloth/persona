@@ -34,13 +34,10 @@ const Default = (props) => {
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
-                        <ScrollAnimation animateIn='fadeIn'
-                            animateOut='fadeOut'>
-                            <p class="animate__fadeIn animate__fadeOut">what is your</p>
-                            <h1>
-                                PERSONA?
-                            </h1>
-                        </ScrollAnimation>
+                        <p>what is your</p>
+                        <h1>
+                            PERSONA?
+                        </h1>
                     </div>
                 </div>
             </div>
@@ -60,10 +57,13 @@ const Default = (props) => {
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
-                        <p>
-                            <b>PERSONA</b> <br></br>
-                            the aspect of someone's character that is presented to or perceived by others
-                        </p>
+                        <ScrollAnimation animateIn='fadeIn'
+                            animateOut='fadeOut'>
+                            <p>
+                                <b>PERSONA</b> <br></br>
+                                the aspect of someone's character that is presented to or perceived by others
+                            </p>
+                        </ScrollAnimation>
                     </div>
                 </div>
             </div>
@@ -167,7 +167,7 @@ const Default = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
