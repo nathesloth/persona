@@ -88,9 +88,12 @@ const Default = (props) => {
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
-                        <p>
-                            The average teenager spends over 18 Hours online a week.
-                        </p>
+                        <ScrollAnimation animateIn='fadeIn'
+                            animateOut='fadeOut'>
+                            <p>
+                                The average teenager spends over 18 Hours online a week.
+                            </p>
+                        </ScrollAnimation>
                     </div>
                 </div>
             </div>
@@ -98,9 +101,12 @@ const Default = (props) => {
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
-                        <p>
-                            Research also suggests that the amount of time spent on these social media platforms has an immense impact on mental health, body image issues, self harm and disordered eating, in children and teens.
-                        </p>
+                        <ScrollAnimation animateIn='fadeIn'
+                            animateOut='fadeOut'>
+                            <p>
+                                Research also suggests that the amount of time spent on these social media platforms has an immense impact on mental health, body image issues, self harm and disordered eating, in children and teens.
+                            </p>
+                        </ScrollAnimation>
                     </div>
                 </div>
             </div>
@@ -112,9 +118,12 @@ const Default = (props) => {
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
-                        <p>
-                            By seeing perfect individuals and the amazing lives of others, we may therefore sometimes feel we need to present a version of ourselves that isn't entirely authentic.
-                        </p>
+                        <ScrollAnimation animateIn='fadeIn'
+                            animateOut='fadeOut'>
+                            <p>
+                                By seeing perfect individuals and the amazing lives of others, we may therefore sometimes feel we need to present a version of ourselves that isn't entirely authentic.
+                            </p>
+                        </ScrollAnimation>
                     </div>
                 </div>
             </div>
@@ -127,9 +136,12 @@ const Default = (props) => {
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
-                        <p>
-                            You may call it a facade or mask that we use to hide our true selves.
-                        </p>
+                        <ScrollAnimation animateIn='fadeIn'
+                            animateOut='fadeOut'>
+                            <p>
+                                You may call it a facade or mask that we use to hide our true selves.
+                            </p>
+                        </ScrollAnimation>
                     </div>
                 </div>
             </div>
@@ -137,9 +149,12 @@ const Default = (props) => {
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
-                        <p>
-                            PERSONA was designed to create a space for onlookers and viewers to share thoughts anonymously that may be too vulnerable to say aloud.
-                        </p>
+                        <ScrollAnimation animateIn='fadeIn'
+                            animateOut='fadeOut'>
+                            <p>
+                                PERSONA was designed to create a space for viewers to share thoughts anonymously that may be too vulnerable to say aloud. It was also designed create a connection between these onlookers and the people around them, and creating community values.
+                            </p>
+                        </ScrollAnimation>
                     </div>
                 </div>
             </div>
@@ -151,18 +166,22 @@ const Default = (props) => {
             <div className="home container unselectable">
                 <div className="row">
                     <div className="col-12">
-                        <p>
-                            We encourage you to leave something behind on this collab wall.
+
+                        <ScrollAnimation animateIn='fadeIn'
+                            animateOut='fadeOut'>
+                            <p>
+                                We encourage you to leave something behind on this collab wall.
+                                <br></br>
+                                These messages are anonymous, but we believe that any thoughts, words and stories can help others.
+                            </p>
                             <br></br>
-                            These messages are anonymous, but we believe that any thoughts, words and stories can help others.
-                        </p>
-                        <br></br>
-                        <br></br>
-                        <p>Press here</p>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
+                            <br></br>
+                            <p>Press here</p>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                        </ScrollAnimation>
                         <Link style={buttonStyle} to="/Input">Leave a message here!</Link>
                     </div>
                 </div>

@@ -16,6 +16,9 @@ const Input = (props) => {
     window.location.reload();
   }
 
+  
+
+
   const [response, setResponse] = useState("");
   const [url, setURL] = useState("");
   const [style, setStyle] = useState("noStyle");
@@ -168,6 +171,7 @@ const Input = (props) => {
                   name="text"
                   rows="5"
                   cols="10"
+                  onKeyUp="check_val()"
                   wrap="soft"
                   spellCheck="true"
                   maxLength="300"
