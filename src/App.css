@@ -104,6 +104,7 @@ circle,
   user-select: none;
 }
 
+
 .Wall p {
   background-color: #FAF8F8;
   font-weight: 400;
@@ -149,4 +150,15 @@ circle,
   vertical-align: middle;
   height: 30px;
   transform: translate(0, 50%);
+}
+
+/* bouncing */
+.my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+  animation: heartBeat;
+  /* referring directly to the animation's @keyframe declaration */
+
+  --animate-duration: 4s !important;
+  /* don't forget to set a duration! */
 }

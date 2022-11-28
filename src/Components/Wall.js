@@ -3,10 +3,16 @@ import "../index.css";
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import Rellax from 'rellax';
+import 'animate.css';
 
 const Wall = (props) => {
   const [responseList, setResponseList] = useState([]);
   var rellax = new Rellax('.rellax', { horizontal: true, vertical: true });
+
+  setTimeout(function () {
+    window.location.reload();
+  }, 300000);
+
 
   useEffect(() => {
     Axios.get("https://persona-collabwall.herokuapp.com/api/get").then((response) => {
@@ -30,6 +36,8 @@ const Wall = (props) => {
   function randomPlace() {
     return Math.random() * 4;
   }
+
+
 
 
   return (
@@ -131,7 +139,8 @@ const Wall = (props) => {
 
       <div className="container containerB unselectable" data-rellax-speed="0.2">
         <div className="row">
-          <div className="col-12">
+          <div className="col-12 my-element animate__animated animate__infinite">
+
             <h1>
               LEAVE YOUR<br></br>MARK
             </h1>
