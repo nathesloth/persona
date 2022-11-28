@@ -10,6 +10,7 @@ import {
 
 const Input = (props) => {
   const navigate = useNavigate();
+  const [badWords, setBad] = useState(false);
 
   function changeLocation(placeToGo) {
     navigate(placeToGo, { replace: true });
@@ -17,7 +18,7 @@ const Input = (props) => {
   }
 
   function check_val() {
-    var bad_words = new Array("death", "arse", "cock", "crap", "frigger", "nigger", "nigga", "nigra", "prick", "fucker", "spastic", "retard", "spazz", "twat", "Ben Dover", "Ann Al", "erection", "sex", "wank", "kill", "murder", "piss", "bastard", "pussy", "damn", "idiot", "bollocks", "skank", "bugger", "hell", "poop", "fuck", "slut", "whore", "shit", "ass", "cunt", "bitch", "dyke", "faggot", "arsehole", "asshole", "dick");
+    var bad_words = new Array("death", "arse", "cock", "crap", "frigger", "nigger", "hoe", "nigga", "nigra", "prick", "fucker", "spastic", "retard", "spazz", "twat", "Ben Dover", "Ann Al", "erection", "sex", "wank", "kill", "murder", "piss", "bastard", "pussy", "damn", "idiot", "bollocks", "skank", "bugger", "hell", "poop", "fuck", "slut", "whore", "shit", "ass", "cunt", "bitch", "dyke", "faggot", "arsehole", "asshole", "slut", "dick");
     var check_text = document.getElementById("hello").value;
     var error = 0;
     for (var i = 0; i < bad_words.length; i++) {
@@ -29,10 +30,12 @@ const Input = (props) => {
     }
 
     if (error > 0) {
-      document.getElementById("bad_notice").innerHTML = "Some Bad Words In Your Text!";
+      setBad(true);
+      document.getElementById("bad_notice").innerHTML = "Some Bad Words In Your Text!" + badWords.toString();
     }
     else {
       document.getElementById("bad_notice").innerHTML = "";
+      setBad(false);
     }
   }
 
@@ -69,14 +72,16 @@ const Input = (props) => {
     "What was a life changing moment for you?"];
 
   const addResponse = () => {
-    Axios.post("https://persona-collabwall.herokuapp.com/api/insert", {
-      response: response,
-      style: style,
-      prompt: prompt,
-      url: url,
-    }).then(() => {
-      console.log("Success");
-    });
+    if (badWords !== true) {
+      Axios.post("https://persona-collabwall.herokuapp.com/api/insert", {
+        response: response,
+        style: style,
+        prompt: prompt,
+        url: url,
+      }).then(() => {
+        console.log("Success");
+      });
+    }
   };
 
   const handleSubmit = (event) => {
