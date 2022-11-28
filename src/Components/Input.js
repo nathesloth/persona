@@ -31,7 +31,7 @@ const Input = (props) => {
 
     if (error > 0) {
       setBad(true);
-      document.getElementById("bad_notice").innerHTML = "Some Bad Words In Your Text!" + badWords.toString();
+      document.getElementById("bad_notice").innerHTML = "Some Bad Words In Your Text!";
     }
     else {
       document.getElementById("bad_notice").innerHTML = "";
