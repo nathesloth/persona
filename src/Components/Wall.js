@@ -14,6 +14,15 @@ const Wall = (props) => {
   }, 300000);
 
 
+  const [showElement, setShowElement] = React.useState(true)
+  useEffect(() => {
+    setTimeout(function () {
+      setShowElement(false)
+    }, 3000);
+  },
+    [])
+
+
   useEffect(() => {
     Axios.get("https://persona-collabwall.herokuapp.com/api/get").then((response) => {
       console.log(response.data);
@@ -42,6 +51,12 @@ const Wall = (props) => {
 
   return (
     <div className="Wall" id="Wall">
+
+      <div className={`${showElement ? 'overlayy' : 'alert-hidden'}`}>
+        <img src="https://i.imgur.com/SMHaUKp.png" width={100} />
+        <p>Loading new messages!</p>
+      </div>
+
       <div class="dropdown">
         {/* <div class="dropdown-content">
           <a href="#">How are you feeling today?</a>
@@ -140,7 +155,6 @@ const Wall = (props) => {
       <div className="container containerB unselectable" data-rellax-speed="0.2">
         <div className="row">
           <div className="col-12 my-element animate__animated animate__infinite">
-
             <h1>
               LEAVE YOUR<br></br>MARK
             </h1>
