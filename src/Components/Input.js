@@ -16,8 +16,25 @@ const Input = (props) => {
     window.location.reload();
   }
 
-  
+  function check_val() {
+    var bad_words = new Array("death", "arse", "cock", "crap", "frigger", "nigger", "nigga", "nigra", "prick", "fucker", "spastic", "retard", "spazz", "twat", "Ben Dover", "Ann Al", "erection", "sex", "wank", "kill", "murder", "piss", "bastard", "pussy", "damn", "idiot", "bollocks", "skank", "bugger", "hell", "poop", "fuck", "slut", "whore", "shit", "ass", "cunt", "bitch", "dyke", "faggot", "arsehole", "asshole", "dick");
+    var check_text = document.getElementById("hello").value;
+    var error = 0;
+    for (var i = 0; i < bad_words.length; i++) {
+      var val = bad_words[i];
+      if ((check_text.toLowerCase()).indexOf(val.toString()) > -1) {
+        error = error + 1;
+        // Insert something that will say I have bad words 
+      }
+    }
 
+    if (error > 0) {
+      document.getElementById("bad_notice").innerHTML = "Some Bad Words In Your Text!";
+    }
+    else {
+      document.getElementById("bad_notice").innerHTML = "";
+    }
+  }
 
   const [response, setResponse] = useState("");
   const [url, setURL] = useState("");
@@ -171,7 +188,7 @@ const Input = (props) => {
                   name="text"
                   rows="5"
                   cols="10"
-                  onKeyUp="check_val()"
+                  onKeyUp={check_val}
                   wrap="soft"
                   spellCheck="true"
                   maxLength="300"
@@ -183,6 +200,8 @@ const Input = (props) => {
                 ></textarea>
               </div>
 
+              <p id="bad_notice"></p>
+
               <div className="prompt align-center">
                 <select onChange={selectStyle}>
                   <option value="" disabled selected hidden>Choose a style</option>
@@ -193,7 +212,6 @@ const Input = (props) => {
                   <option value="image">Image</option>
                 </select>
               </div>
-
 
               {/* Only add when selecting image */}
 
