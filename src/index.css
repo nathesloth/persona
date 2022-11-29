@@ -286,7 +286,28 @@ button {
   display: table-cell;
 }
 
-.containerD {
+.containerE {
+  height: 100vh;
+  vertical-align: middle;
+  position: fixed;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerE h1 {
+  font-size: 1.5em !important;
+  width: 50%;
+  margin: auto;
+  height: 20vh;
+  vertical-align: middle;
+  display: table-cell;
+  margin-bottom: 0 !important;
+}
+
+
+.containerE {
   height: 100vh;
   vertical-align: middle;
   position: fixed;

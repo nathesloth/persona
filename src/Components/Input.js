@@ -94,7 +94,12 @@ const Input = (props) => {
     setURL("");
     setStyle("");
     setPrompt("");
-    navigate('/submitted');
+    if (!badWords) {
+      navigate('/submitted');
+    }
+    else {
+      navigate('/notsubmit');
+    }
   };
 
   const setPromptT = (event) => {
